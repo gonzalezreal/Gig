@@ -1,0 +1,17 @@
+//
+// Prefix header for all source files of the 'Gig' target in the 'Gig' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+
+    #if TARGET_OS_IPHONE
+        #import <MobileCoreServices/MobileCoreServices.h>
+    #else
+        #import <CoreServices/CoreServices.h>
+    #endif
+
+    #import <SenTestingKit/SenTestingKit.h>
+    #import <Gig/Gig.h>
+#endif
