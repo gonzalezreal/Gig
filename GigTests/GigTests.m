@@ -8,6 +8,8 @@
 
 #import "GigTests.h"
 
+#import <Overcoat/Overcoat.h>
+
 @implementation GigTests
 
 - (void)setUp
@@ -26,7 +28,11 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in GigTests");
+    OVCClient *client = [[OVCClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://localhost"]];
+    STAssertNotNil(client, nil);
+    
+    NSDictionary *dictionary = @{@"foo": @"bar"};
+    STAssertEqualObjects(@"bar", [dictionary ovc_objectForKeyPath:@"foo"], nil);
 }
 
 @end

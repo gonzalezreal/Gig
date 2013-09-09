@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9925E33017DE09E40097A2B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9925E32F17DE09E40097A2B9 /* UIKit.framework */; };
+		9978C5E417DDF93D004F7EBF /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E317DDF93D004F7EBF /* libAFNetworking.a */; };
+		9978C5E617DDF944004F7EBF /* libMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E517DDF944004F7EBF /* libMantle.a */; };
+		9978C5E817DDF94E004F7EBF /* libOHHTTPStubs-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */; };
+		9978C5EA17DDFF9B004F7EBF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E917DDFF9B004F7EBF /* CoreGraphics.framework */; };
+		9978C5EC17DDFFAA004F7EBF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5EB17DDFFAA004F7EBF /* Security.framework */; };
+		9978C5EE17DDFFB1004F7EBF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5ED17DDFFB1004F7EBF /* SystemConfiguration.framework */; };
+		9978C5F017DDFFC6004F7EBF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5EF17DDFFC6004F7EBF /* MobileCoreServices.framework */; };
+		9978C5F117DE0185004F7EBF /* libOvercoat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5B517DDF7E3004F7EBF /* libOvercoat.a */; };
+		9978C5F317DE0221004F7EBF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5F217DE0221004F7EBF /* Accounts.framework */; };
+		9978C5F517DE0229004F7EBF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5F417DE0229004F7EBF /* Social.framework */; };
 		99F2456417DDB0C100541C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2456317DDB0C100541C24 /* Foundation.framework */; };
-		99F2456917DDB0C100541C24 /* Gig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99F2456817DDB0C100541C24 /* Gig.h */; };
-		99F2456B17DDB0C100541C24 /* Gig.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F2456A17DDB0C100541C24 /* Gig.m */; };
 		99F2457317DDB0C100541C24 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2457217DDB0C100541C24 /* SenTestingKit.framework */; };
-		99F2457517DDB0C100541C24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2457417DDB0C100541C24 /* UIKit.framework */; };
 		99F2457617DDB0C100541C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2456317DDB0C100541C24 /* Foundation.framework */; };
 		99F2457917DDB0C100541C24 /* libGig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2456017DDB0C100541C24 /* libGig.a */; };
 		99F2457F17DDB0C100541C24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99F2457D17DDB0C100541C24 /* InfoPlist.strings */; };
@@ -19,6 +27,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9978C5B417DDF7E3004F7EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 99663E0F173BAD1D0090F0E6;
+			remoteInfo = "Overcoat iOS";
+		};
+		9978C5B617DDF7E3004F7EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 99663E20173BAD1D0090F0E6;
+			remoteInfo = "Overcoat iOS Tests";
+		};
+		9978C5B817DDF7E3004F7EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 994B286917463C9A003E487E;
+			remoteInfo = "Overcoat Mac";
+		};
+		9978C5BA17DDF7E3004F7EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 994B287F17463C9A003E487E;
+			remoteInfo = "Overcoat Mac Tests";
+		};
+		9978C5E117DDF913004F7EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 99663E0E173BAD1D0090F0E6;
+			remoteInfo = "Overcoat iOS";
+		};
 		99F2457717DDB0C100541C24 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 99F2455817DDB0C100541C24 /* Project object */;
@@ -35,21 +78,44 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				99F2456917DDB0C100541C24 /* Gig.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9925E32F17DE09E40097A2B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Overcoat.xcodeproj; path = Overcoat/Overcoat.xcodeproj; sourceTree = "<group>"; };
+		9978C5BE17DDF7F4004F7EBF /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		9978C5C017DDF7F4004F7EBF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		9978C5C117DDF7F4004F7EBF /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
+		9978C5C217DDF7F4004F7EBF /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		9978C5C317DDF7F4004F7EBF /* Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Test.xcconfig; sourceTree = "<group>"; };
+		9978C5C517DDF7F4004F7EBF /* Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Application.xcconfig; sourceTree = "<group>"; };
+		9978C5C617DDF7F4004F7EBF /* StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticLibrary.xcconfig; sourceTree = "<group>"; };
+		9978C5C817DDF7F4004F7EBF /* iOS-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Application.xcconfig"; sourceTree = "<group>"; };
+		9978C5C917DDF7F4004F7EBF /* iOS-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-Base.xcconfig"; sourceTree = "<group>"; };
+		9978C5CA17DDF7F4004F7EBF /* iOS-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "iOS-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		9978C5CC17DDF7F4004F7EBF /* Mac-Application.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Application.xcconfig"; sourceTree = "<group>"; };
+		9978C5CD17DDF7F4004F7EBF /* Mac-Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Base.xcconfig"; sourceTree = "<group>"; };
+		9978C5CE17DDF7F4004F7EBF /* Mac-DynamicLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-DynamicLibrary.xcconfig"; sourceTree = "<group>"; };
+		9978C5CF17DDF7F4004F7EBF /* Mac-Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-Framework.xcconfig"; sourceTree = "<group>"; };
+		9978C5D017DDF7F4004F7EBF /* Mac-StaticLibrary.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Mac-StaticLibrary.xcconfig"; sourceTree = "<group>"; };
+		9978C5D117DDF7F4004F7EBF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		9978C5E317DDF93D004F7EBF /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "Overcoat/OvercoatDependencies/build/Release-iphoneos/libAFNetworking.a"; sourceTree = "<group>"; };
+		9978C5E517DDF944004F7EBF /* libMantle.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMantle.a; path = "Overcoat/Mantle/build/Release-iphoneos/libMantle.a"; sourceTree = "<group>"; };
+		9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libOHHTTPStubs-iOS.a"; path = "Overcoat/OvercoatTests/OHHTTPStubs/OHHTTPStubs/build/Release-iphoneos/libOHHTTPStubs-iOS.a"; sourceTree = "<group>"; };
+		9978C5E917DDFF9B004F7EBF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9978C5EB17DDFFAA004F7EBF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9978C5ED17DDFFB1004F7EBF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9978C5EF17DDFFC6004F7EBF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9978C5F217DE0221004F7EBF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9978C5F417DE0229004F7EBF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		99F2456017DDB0C100541C24 /* libGig.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGig.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2456317DDB0C100541C24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99F2456717DDB0C100541C24 /* Gig-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gig-Prefix.pch"; sourceTree = "<group>"; };
-		99F2456817DDB0C100541C24 /* Gig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gig.h; sourceTree = "<group>"; };
-		99F2456A17DDB0C100541C24 /* Gig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gig.m; sourceTree = "<group>"; };
-		99F2457117DDB0C100541C24 /* GigTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GigTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		99F2457117DDB0C100541C24 /* GigTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GigTests.octest; path = "Gig iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2457217DDB0C100541C24 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		99F2457417DDB0C100541C24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		99F2457C17DDB0C100541C24 /* GigTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GigTests-Info.plist"; sourceTree = "<group>"; };
 		99F2457E17DDB0C100541C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		99F2458017DDB0C100541C24 /* GigTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GigTests.h; sourceTree = "<group>"; };
@@ -69,16 +135,101 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99F2457317DDB0C100541C24 /* SenTestingKit.framework in Frameworks */,
-				99F2457517DDB0C100541C24 /* UIKit.framework in Frameworks */,
-				99F2457617DDB0C100541C24 /* Foundation.framework in Frameworks */,
+				9925E33017DE09E40097A2B9 /* UIKit.framework in Frameworks */,
+				9978C5F517DE0229004F7EBF /* Social.framework in Frameworks */,
+				9978C5F317DE0221004F7EBF /* Accounts.framework in Frameworks */,
+				9978C5F017DDFFC6004F7EBF /* MobileCoreServices.framework in Frameworks */,
+				9978C5EE17DDFFB1004F7EBF /* SystemConfiguration.framework in Frameworks */,
+				9978C5EC17DDFFAA004F7EBF /* Security.framework in Frameworks */,
+				9978C5EA17DDFF9B004F7EBF /* CoreGraphics.framework in Frameworks */,
 				99F2457917DDB0C100541C24 /* libGig.a in Frameworks */,
+				9978C5F117DE0185004F7EBF /* libOvercoat.a in Frameworks */,
+				9978C5E817DDF94E004F7EBF /* libOHHTTPStubs-iOS.a in Frameworks */,
+				9978C5E617DDF944004F7EBF /* libMantle.a in Frameworks */,
+				9978C5E417DDF93D004F7EBF /* libAFNetworking.a in Frameworks */,
+				99F2457317DDB0C100541C24 /* SenTestingKit.framework in Frameworks */,
+				99F2457617DDB0C100541C24 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9978C5A917DDF7E2004F7EBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9978C5B517DDF7E3004F7EBF /* libOvercoat.a */,
+				9978C5B717DDF7E3004F7EBF /* Overcoat iOS Tests.octest */,
+				9978C5B917DDF7E3004F7EBF /* Overcoat.framework */,
+				9978C5BB17DDF7E3004F7EBF /* Overcoat Mac Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9978C5BC17DDF7F4004F7EBF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				9978C5BD17DDF7F4004F7EBF /* Base */,
+				9978C5C717DDF7F4004F7EBF /* iOS */,
+				9978C5CB17DDF7F4004F7EBF /* Mac OS X */,
+				9978C5D117DDF7F4004F7EBF /* README.md */,
+			);
+			name = Configuration;
+			path = Overcoat/Configuration;
+			sourceTree = "<group>";
+		};
+		9978C5BD17DDF7F4004F7EBF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9978C5BE17DDF7F4004F7EBF /* Common.xcconfig */,
+				9978C5BF17DDF7F4004F7EBF /* Configurations */,
+				9978C5C417DDF7F4004F7EBF /* Targets */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9978C5BF17DDF7F4004F7EBF /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				9978C5C017DDF7F4004F7EBF /* Debug.xcconfig */,
+				9978C5C117DDF7F4004F7EBF /* Profile.xcconfig */,
+				9978C5C217DDF7F4004F7EBF /* Release.xcconfig */,
+				9978C5C317DDF7F4004F7EBF /* Test.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		9978C5C417DDF7F4004F7EBF /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				9978C5C517DDF7F4004F7EBF /* Application.xcconfig */,
+				9978C5C617DDF7F4004F7EBF /* StaticLibrary.xcconfig */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		9978C5C717DDF7F4004F7EBF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9978C5C817DDF7F4004F7EBF /* iOS-Application.xcconfig */,
+				9978C5C917DDF7F4004F7EBF /* iOS-Base.xcconfig */,
+				9978C5CA17DDF7F4004F7EBF /* iOS-StaticLibrary.xcconfig */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		9978C5CB17DDF7F4004F7EBF /* Mac OS X */ = {
+			isa = PBXGroup;
+			children = (
+				9978C5CC17DDF7F4004F7EBF /* Mac-Application.xcconfig */,
+				9978C5CD17DDF7F4004F7EBF /* Mac-Base.xcconfig */,
+				9978C5CE17DDF7F4004F7EBF /* Mac-DynamicLibrary.xcconfig */,
+				9978C5CF17DDF7F4004F7EBF /* Mac-Framework.xcconfig */,
+				9978C5D017DDF7F4004F7EBF /* Mac-StaticLibrary.xcconfig */,
+			);
+			path = "Mac OS X";
+			sourceTree = "<group>";
+		};
 		99F2455717DDB0C100541C24 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +237,7 @@
 				99F2457A17DDB0C100541C24 /* GigTests */,
 				99F2456217DDB0C100541C24 /* Frameworks */,
 				99F2456117DDB0C100541C24 /* Products */,
+				9978C5BC17DDF7F4004F7EBF /* Configuration */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +253,19 @@
 		99F2456217DDB0C100541C24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */,
 				99F2456317DDB0C100541C24 /* Foundation.framework */,
+				9925E32F17DE09E40097A2B9 /* UIKit.framework */,
 				99F2457217DDB0C100541C24 /* SenTestingKit.framework */,
-				99F2457417DDB0C100541C24 /* UIKit.framework */,
+				9978C5EF17DDFFC6004F7EBF /* MobileCoreServices.framework */,
+				9978C5ED17DDFFB1004F7EBF /* SystemConfiguration.framework */,
+				9978C5EB17DDFFAA004F7EBF /* Security.framework */,
+				9978C5E917DDFF9B004F7EBF /* CoreGraphics.framework */,
+				9978C5F417DE0229004F7EBF /* Social.framework */,
+				9978C5F217DE0221004F7EBF /* Accounts.framework */,
+				9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */,
+				9978C5E517DDF944004F7EBF /* libMantle.a */,
+				9978C5E317DDF93D004F7EBF /* libAFNetworking.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,8 +273,6 @@
 		99F2456517DDB0C100541C24 /* Gig */ = {
 			isa = PBXGroup;
 			children = (
-				99F2456817DDB0C100541C24 /* Gig.h */,
-				99F2456A17DDB0C100541C24 /* Gig.m */,
 				99F2456617DDB0C100541C24 /* Supporting Files */,
 			);
 			path = Gig;
@@ -148,9 +308,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		99F2455F17DDB0C100541C24 /* Gig */ = {
+		99F2455F17DDB0C100541C24 /* Gig iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99F2458517DDB0C100541C24 /* Build configuration list for PBXNativeTarget "Gig" */;
+			buildConfigurationList = 99F2458517DDB0C100541C24 /* Build configuration list for PBXNativeTarget "Gig iOS" */;
 			buildPhases = (
 				99F2455C17DDB0C100541C24 /* Sources */,
 				99F2455D17DDB0C100541C24 /* Frameworks */,
@@ -159,15 +319,16 @@
 			buildRules = (
 			);
 			dependencies = (
+				9978C5E217DDF913004F7EBF /* PBXTargetDependency */,
 			);
-			name = Gig;
+			name = "Gig iOS";
 			productName = Gig;
 			productReference = 99F2456017DDB0C100541C24 /* libGig.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		99F2457017DDB0C100541C24 /* GigTests */ = {
+		99F2457017DDB0C100541C24 /* Gig iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99F2458817DDB0C100541C24 /* Build configuration list for PBXNativeTarget "GigTests" */;
+			buildConfigurationList = 99F2458817DDB0C100541C24 /* Build configuration list for PBXNativeTarget "Gig iOS Tests" */;
 			buildPhases = (
 				99F2456C17DDB0C100541C24 /* Sources */,
 				99F2456D17DDB0C100541C24 /* Frameworks */,
@@ -179,7 +340,7 @@
 			dependencies = (
 				99F2457817DDB0C100541C24 /* PBXTargetDependency */,
 			);
-			name = GigTests;
+			name = "Gig iOS Tests";
 			productName = GigTests;
 			productReference = 99F2457117DDB0C100541C24 /* GigTests.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -190,6 +351,7 @@
 		99F2455817DDB0C100541C24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GIG;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Guillermo Gonzalez";
 			};
@@ -203,13 +365,50 @@
 			mainGroup = 99F2455717DDB0C100541C24;
 			productRefGroup = 99F2456117DDB0C100541C24 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9978C5A917DDF7E2004F7EBF /* Products */;
+					ProjectRef = 9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				99F2455F17DDB0C100541C24 /* Gig */,
-				99F2457017DDB0C100541C24 /* GigTests */,
+				99F2455F17DDB0C100541C24 /* Gig iOS */,
+				99F2457017DDB0C100541C24 /* Gig iOS Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9978C5B517DDF7E3004F7EBF /* libOvercoat.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libOvercoat.a;
+			remoteRef = 9978C5B417DDF7E3004F7EBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9978C5B717DDF7E3004F7EBF /* Overcoat iOS Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Overcoat iOS Tests.octest";
+			remoteRef = 9978C5B617DDF7E3004F7EBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9978C5B917DDF7E3004F7EBF /* Overcoat.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Overcoat.framework;
+			remoteRef = 9978C5B817DDF7E3004F7EBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9978C5BB17DDF7E3004F7EBF /* Overcoat Mac Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Overcoat Mac Tests.octest";
+			remoteRef = 9978C5BA17DDF7E3004F7EBF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		99F2456E17DDB0C100541C24 /* Resources */ = {
@@ -243,7 +442,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99F2456B17DDB0C100541C24 /* Gig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +456,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9978C5E217DDF913004F7EBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Overcoat iOS";
+			targetProxy = 9978C5E117DDF913004F7EBF /* PBXContainerItemProxy */;
+		};
 		99F2457817DDB0C100541C24 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 99F2455F17DDB0C100541C24 /* Gig */;
+			target = 99F2455F17DDB0C100541C24 /* Gig iOS */;
 			targetProxy = 99F2457717DDB0C100541C24 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -279,6 +482,7 @@
 /* Begin XCBuildConfiguration section */
 		99F2458317DDB0C100541C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9978C5C017DDF7F4004F7EBF /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -301,7 +505,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -309,6 +513,7 @@
 		};
 		99F2458417DDB0C100541C24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9978C5C217DDF7F4004F7EBF /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -324,7 +529,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -332,30 +537,33 @@
 		};
 		99F2458617DDB0C100541C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9978C5CA17DDF7F4004F7EBF /* iOS-StaticLibrary.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Gig.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gig/Gig-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gig;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		99F2458717DDB0C100541C24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9978C5CA17DDF7F4004F7EBF /* iOS-StaticLibrary.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Gig.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gig/Gig-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gig;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
 		99F2458917DDB0C100541C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9978C5C817DDF7F4004F7EBF /* iOS-Application.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -364,6 +572,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gig/Gig-Prefix.pch";
 				INFOPLIST_FILE = "GigTests/GigTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -371,6 +580,7 @@
 		};
 		99F2458A17DDB0C100541C24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9978C5C817DDF7F4004F7EBF /* iOS-Application.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
@@ -379,6 +589,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gig/Gig-Prefix.pch";
 				INFOPLIST_FILE = "GigTests/GigTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -396,21 +607,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99F2458517DDB0C100541C24 /* Build configuration list for PBXNativeTarget "Gig" */ = {
+		99F2458517DDB0C100541C24 /* Build configuration list for PBXNativeTarget "Gig iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99F2458617DDB0C100541C24 /* Debug */,
 				99F2458717DDB0C100541C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		99F2458817DDB0C100541C24 /* Build configuration list for PBXNativeTarget "GigTests" */ = {
+		99F2458817DDB0C100541C24 /* Build configuration list for PBXNativeTarget "Gig iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99F2458917DDB0C100541C24 /* Debug */,
 				99F2458A17DDB0C100541C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
