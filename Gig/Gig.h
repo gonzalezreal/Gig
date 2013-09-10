@@ -27,6 +27,7 @@
 #import "GIGSizes.h"
 #import "GIGUserMention.h"
 #import "GIGURL.h"
+#import "GIGMedia.h"
 
 #import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
 
