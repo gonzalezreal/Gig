@@ -46,6 +46,12 @@
 		9978102B17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */; };
 		9978102D17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */; };
 		9978102E17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */; };
+		9978103B17DF1365008E9359 /* GIGURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978103917DF1365008E9359 /* GIGURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978103C17DF1365008E9359 /* GIGURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978103917DF1365008E9359 /* GIGURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978103D17DF1365008E9359 /* GIGURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978103A17DF1365008E9359 /* GIGURL.m */; };
+		9978103E17DF1365008E9359 /* GIGURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978103A17DF1365008E9359 /* GIGURL.m */; };
+		9978104117DF1396008E9359 /* GIGURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104017DF1396008E9359 /* GIGURLTests.m */; };
+		9978104217DF1396008E9359 /* GIGURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104017DF1396008E9359 /* GIGURLTests.m */; };
 		9978C5E417DDF93D004F7EBF /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E317DDF93D004F7EBF /* libAFNetworking.a */; };
 		9978C5E617DDF944004F7EBF /* libMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E517DDF944004F7EBF /* libMantle.a */; };
 		9978C5E817DDF94E004F7EBF /* libOHHTTPStubs-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */; };
@@ -149,6 +155,9 @@
 		9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+GIGPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
 		9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+GIGPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
 		9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerAdditionsTests.m; sourceTree = "<group>"; };
+		9978103917DF1365008E9359 /* GIGURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGURL.h; sourceTree = "<group>"; };
+		9978103A17DF1365008E9359 /* GIGURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGURL.m; sourceTree = "<group>"; };
+		9978104017DF1396008E9359 /* GIGURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGURLTests.m; sourceTree = "<group>"; };
 		9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Overcoat.xcodeproj; path = Overcoat/Overcoat.xcodeproj; sourceTree = "<group>"; };
 		9978C5BE17DDF7F4004F7EBF /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		9978C5C017DDF7F4004F7EBF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -259,6 +268,8 @@
 				9978101517DEF90B008E9359 /* GIGSizes.m */,
 				9978101D17DF0227008E9359 /* GIGUserMention.h */,
 				9978101E17DF0227008E9359 /* GIGUserMention.m */,
+				9978103917DF1365008E9359 /* GIGURL.h */,
+				9978103A17DF1365008E9359 /* GIGURL.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -266,9 +277,7 @@
 		9925E33A17DE0C500097A2B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9925E33C17DE0C880097A2B9 /* GIGSizeTests.m */,
-				9978101A17DEFD8A008E9359 /* GIGSizesTests.m */,
-				9978102317DF0258008E9359 /* GIGUserMentionTests.m */,
+				9978103F17DF137B008E9359 /* Entities */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -298,6 +307,17 @@
 				9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */,
 			);
 			name = Transformers;
+			sourceTree = "<group>";
+		};
+		9978103F17DF137B008E9359 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9925E33C17DE0C880097A2B9 /* GIGSizeTests.m */,
+				9978101A17DEFD8A008E9359 /* GIGSizesTests.m */,
+				9978102317DF0258008E9359 /* GIGUserMentionTests.m */,
+				9978104017DF1396008E9359 /* GIGURLTests.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		9978C5A917DDF7E2004F7EBF /* Products */ = {
@@ -475,6 +495,7 @@
 				9978101617DEF90B008E9359 /* GIGSizes.h in Headers */,
 				9978101F17DF0227008E9359 /* GIGUserMention.h in Headers */,
 				9978102817DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */,
+				9978103B17DF1365008E9359 /* GIGURL.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +508,7 @@
 				9978101717DEF90B008E9359 /* GIGSizes.h in Headers */,
 				9978102017DF0227008E9359 /* GIGUserMention.h in Headers */,
 				9978102917DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */,
+				9978103C17DF1365008E9359 /* GIGURL.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,6 +721,7 @@
 				9978101917DEF90B008E9359 /* GIGSizes.m in Sources */,
 				9978102217DF0227008E9359 /* GIGUserMention.m in Sources */,
 				9978102B17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */,
+				9978103E17DF1365008E9359 /* GIGURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +733,7 @@
 				9978101C17DEFD8A008E9359 /* GIGSizesTests.m in Sources */,
 				9978102517DF0258008E9359 /* GIGUserMentionTests.m in Sources */,
 				9978102E17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */,
+				9978104217DF1396008E9359 /* GIGURLTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +745,7 @@
 				9978101817DEF90B008E9359 /* GIGSizes.m in Sources */,
 				9978102117DF0227008E9359 /* GIGUserMention.m in Sources */,
 				9978102A17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */,
+				9978103D17DF1365008E9359 /* GIGURL.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +757,7 @@
 				9978101B17DEFD8A008E9359 /* GIGSizesTests.m in Sources */,
 				9978102417DF0258008E9359 /* GIGUserMentionTests.m in Sources */,
 				9978102D17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */,
+				9978104117DF1396008E9359 /* GIGURLTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
