@@ -1,4 +1,4 @@
-// Gig.h
+// NSValueTransformer+GIGPredefinedTransformerAdditions.h
 //
 // Copyright (c) 2013 Guillermo Gonzalez
 //
@@ -20,17 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef _GIG_H
-#define _GIG_H
+#import <Foundation/Foundation.h>
 
-#import "GIGSize.h"
-#import "GIGSizes.h"
-#import "GIGUserMention.h"
-#import "GIGURL.h"
-#import "GIGMedia.h"
-#import "GIGHashtag.h"
-#import "GIGEntities.h"
+extern NSString * const GIGRangeValueTransformerName;
+extern NSString * const GIGDateValueTransformerName;
 
-#import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
+@interface NSValueTransformer (GIGPredefinedTransformerAdditions)
 
-#endif /* _GIG_H */
+@end

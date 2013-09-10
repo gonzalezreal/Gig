@@ -28,6 +28,48 @@
 		9978100F17DEF639008E9359 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978100A17DEF5DC008E9359 /* AFNetworking.framework */; };
 		9978101017DEF64B008E9359 /* Overcoat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5B917DDF7E3004F7EBF /* Overcoat.framework */; };
 		9978101217DEF65B008E9359 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978101117DEF65B008E9359 /* OHHTTPStubs.framework */; };
+		9978101617DEF90B008E9359 /* GIGSizes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978101417DEF90B008E9359 /* GIGSizes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978101717DEF90B008E9359 /* GIGSizes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978101417DEF90B008E9359 /* GIGSizes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978101817DEF90B008E9359 /* GIGSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101517DEF90B008E9359 /* GIGSizes.m */; };
+		9978101917DEF90B008E9359 /* GIGSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101517DEF90B008E9359 /* GIGSizes.m */; };
+		9978101B17DEFD8A008E9359 /* GIGSizesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101A17DEFD8A008E9359 /* GIGSizesTests.m */; };
+		9978101C17DEFD8A008E9359 /* GIGSizesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101A17DEFD8A008E9359 /* GIGSizesTests.m */; };
+		9978101F17DF0227008E9359 /* GIGUserMention.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978101D17DF0227008E9359 /* GIGUserMention.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978102017DF0227008E9359 /* GIGUserMention.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978101D17DF0227008E9359 /* GIGUserMention.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978102117DF0227008E9359 /* GIGUserMention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101E17DF0227008E9359 /* GIGUserMention.m */; };
+		9978102217DF0227008E9359 /* GIGUserMention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101E17DF0227008E9359 /* GIGUserMention.m */; };
+		9978102417DF0258008E9359 /* GIGUserMentionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102317DF0258008E9359 /* GIGUserMentionTests.m */; };
+		9978102517DF0258008E9359 /* GIGUserMentionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102317DF0258008E9359 /* GIGUserMentionTests.m */; };
+		9978102817DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */; };
+		9978102917DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */; };
+		9978102A17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */; };
+		9978102B17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */; };
+		9978102D17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */; };
+		9978102E17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */; };
+		9978103B17DF1365008E9359 /* GIGURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978103917DF1365008E9359 /* GIGURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978103C17DF1365008E9359 /* GIGURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978103917DF1365008E9359 /* GIGURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978103D17DF1365008E9359 /* GIGURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978103A17DF1365008E9359 /* GIGURL.m */; };
+		9978103E17DF1365008E9359 /* GIGURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978103A17DF1365008E9359 /* GIGURL.m */; };
+		9978104117DF1396008E9359 /* GIGURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104017DF1396008E9359 /* GIGURLTests.m */; };
+		9978104217DF1396008E9359 /* GIGURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104017DF1396008E9359 /* GIGURLTests.m */; };
+		9978104517DF160A008E9359 /* GIGMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978104317DF1609008E9359 /* GIGMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978104617DF160A008E9359 /* GIGMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978104317DF1609008E9359 /* GIGMedia.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978104717DF160A008E9359 /* GIGMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104417DF1609008E9359 /* GIGMedia.m */; };
+		9978104817DF160A008E9359 /* GIGMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104417DF1609008E9359 /* GIGMedia.m */; };
+		9978104A17DF162F008E9359 /* GIGMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104917DF162F008E9359 /* GIGMediaTests.m */; };
+		9978104B17DF162F008E9359 /* GIGMediaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104917DF162F008E9359 /* GIGMediaTests.m */; };
+		9978104E17DF1B3D008E9359 /* GIGHashtag.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978104C17DF1B3C008E9359 /* GIGHashtag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978104F17DF1B3D008E9359 /* GIGHashtag.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978104C17DF1B3C008E9359 /* GIGHashtag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978105017DF1B3D008E9359 /* GIGHashtag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104D17DF1B3C008E9359 /* GIGHashtag.m */; };
+		9978105117DF1B3D008E9359 /* GIGHashtag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104D17DF1B3C008E9359 /* GIGHashtag.m */; };
+		9978105317DF1B69008E9359 /* GIGHashtagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105217DF1B69008E9359 /* GIGHashtagTests.m */; };
+		9978105417DF1B69008E9359 /* GIGHashtagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105217DF1B69008E9359 /* GIGHashtagTests.m */; };
+		9978105717DF1DE5008E9359 /* GIGEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978105517DF1DE4008E9359 /* GIGEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978105817DF1DE5008E9359 /* GIGEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978105517DF1DE4008E9359 /* GIGEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978105917DF1DE5008E9359 /* GIGEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105617DF1DE4008E9359 /* GIGEntities.m */; };
+		9978105A17DF1DE5008E9359 /* GIGEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105617DF1DE4008E9359 /* GIGEntities.m */; };
+		9978105C17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */; };
+		9978105D17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */; };
 		9978C5E417DDF93D004F7EBF /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E317DDF93D004F7EBF /* libAFNetworking.a */; };
 		9978C5E617DDF944004F7EBF /* libMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E517DDF944004F7EBF /* libMantle.a */; };
 		9978C5E817DDF94E004F7EBF /* libOHHTTPStubs-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */; };
@@ -121,7 +163,28 @@
 		9978100217DEF405008E9359 /* Gig-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gig-Info.plist"; sourceTree = "<group>"; };
 		9978100817DEF5D5008E9359 /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Gig-cnrthfogmcrdlphgoriaetnpswct/Build/Products/Debug/Mantle.framework"; sourceTree = "<group>"; };
 		9978100A17DEF5DC008E9359 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Gig-cnrthfogmcrdlphgoriaetnpswct/Build/Products/Debug/AFNetworking.framework"; sourceTree = "<group>"; };
-		9978101117DEF65B008E9359 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = OHHTTPStubs.framework; path = Overcoat/OvercoatTests/OHHTTPStubs/OHHTTPStubs/build/Release/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		9978101117DEF65B008E9359 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Overcoat/OvercoatTests/OHHTTPStubs/OHHTTPStubs/build/Release/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		9978101417DEF90B008E9359 /* GIGSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGSizes.h; sourceTree = "<group>"; };
+		9978101517DEF90B008E9359 /* GIGSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGSizes.m; sourceTree = "<group>"; };
+		9978101A17DEFD8A008E9359 /* GIGSizesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGSizesTests.m; sourceTree = "<group>"; };
+		9978101D17DF0227008E9359 /* GIGUserMention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUserMention.h; sourceTree = "<group>"; };
+		9978101E17DF0227008E9359 /* GIGUserMention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserMention.m; sourceTree = "<group>"; };
+		9978102317DF0258008E9359 /* GIGUserMentionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserMentionTests.m; sourceTree = "<group>"; };
+		9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+GIGPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
+		9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+GIGPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
+		9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerAdditionsTests.m; sourceTree = "<group>"; };
+		9978103917DF1365008E9359 /* GIGURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGURL.h; sourceTree = "<group>"; };
+		9978103A17DF1365008E9359 /* GIGURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGURL.m; sourceTree = "<group>"; };
+		9978104017DF1396008E9359 /* GIGURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGURLTests.m; sourceTree = "<group>"; };
+		9978104317DF1609008E9359 /* GIGMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGMedia.h; sourceTree = "<group>"; };
+		9978104417DF1609008E9359 /* GIGMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGMedia.m; sourceTree = "<group>"; };
+		9978104917DF162F008E9359 /* GIGMediaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGMediaTests.m; sourceTree = "<group>"; };
+		9978104C17DF1B3C008E9359 /* GIGHashtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGHashtag.h; sourceTree = "<group>"; };
+		9978104D17DF1B3C008E9359 /* GIGHashtag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGHashtag.m; sourceTree = "<group>"; };
+		9978105217DF1B69008E9359 /* GIGHashtagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGHashtagTests.m; sourceTree = "<group>"; };
+		9978105517DF1DE4008E9359 /* GIGEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGEntities.h; sourceTree = "<group>"; };
+		9978105617DF1DE4008E9359 /* GIGEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGEntities.m; sourceTree = "<group>"; };
+		9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGEntitiesTests.m; sourceTree = "<group>"; };
 		9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Overcoat.xcodeproj; path = Overcoat/Overcoat.xcodeproj; sourceTree = "<group>"; };
 		9978C5BE17DDF7F4004F7EBF /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		9978C5C017DDF7F4004F7EBF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -228,6 +291,18 @@
 			children = (
 				9925E33617DE0AC50097A2B9 /* GIGSize.h */,
 				9925E33717DE0AC50097A2B9 /* GIGSize.m */,
+				9978101417DEF90B008E9359 /* GIGSizes.h */,
+				9978101517DEF90B008E9359 /* GIGSizes.m */,
+				9978101D17DF0227008E9359 /* GIGUserMention.h */,
+				9978101E17DF0227008E9359 /* GIGUserMention.m */,
+				9978103917DF1365008E9359 /* GIGURL.h */,
+				9978103A17DF1365008E9359 /* GIGURL.m */,
+				9978104317DF1609008E9359 /* GIGMedia.h */,
+				9978104417DF1609008E9359 /* GIGMedia.m */,
+				9978104C17DF1B3C008E9359 /* GIGHashtag.h */,
+				9978104D17DF1B3C008E9359 /* GIGHashtag.m */,
+				9978105517DF1DE4008E9359 /* GIGEntities.h */,
+				9978105617DF1DE4008E9359 /* GIGEntities.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -235,7 +310,7 @@
 		9925E33A17DE0C500097A2B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9925E33C17DE0C880097A2B9 /* GIGSizeTests.m */,
+				9978103F17DF137B008E9359 /* Entities */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -248,6 +323,37 @@
 				99780FDA17DEF2FD008E9359 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9978102F17DF0828008E9359 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		9978103017DF0834008E9359 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */,
+				9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		9978103F17DF137B008E9359 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9925E33C17DE0C880097A2B9 /* GIGSizeTests.m */,
+				9978101A17DEFD8A008E9359 /* GIGSizesTests.m */,
+				9978102317DF0258008E9359 /* GIGUserMentionTests.m */,
+				9978104017DF1396008E9359 /* GIGURLTests.m */,
+				9978104917DF162F008E9359 /* GIGMediaTests.m */,
+				9978105217DF1B69008E9359 /* GIGHashtagTests.m */,
+				9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		9978C5A917DDF7E2004F7EBF /* Products */ = {
@@ -377,6 +483,7 @@
 			children = (
 				9925E33F17DE0DB00097A2B9 /* Gig.h */,
 				9925E33517DE0A8E0097A2B9 /* Models */,
+				9978103017DF0834008E9359 /* Transformers */,
 				99F2456617DDB0C100541C24 /* Supporting Files */,
 			);
 			path = Gig;
@@ -396,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				9925E33A17DE0C500097A2B9 /* Models */,
+				9978102F17DF0828008E9359 /* Transformers */,
 				99F2457B17DDB0C100541C24 /* Supporting Files */,
 			);
 			path = GigTests;
@@ -420,6 +528,13 @@
 			files = (
 				99427EAE17DE0E5800020DA0 /* Gig.h in Headers */,
 				99427EAF17DE0E5F00020DA0 /* GIGSize.h in Headers */,
+				9978101617DEF90B008E9359 /* GIGSizes.h in Headers */,
+				9978101F17DF0227008E9359 /* GIGUserMention.h in Headers */,
+				9978102817DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */,
+				9978103B17DF1365008E9359 /* GIGURL.h in Headers */,
+				9978104517DF160A008E9359 /* GIGMedia.h in Headers */,
+				9978104E17DF1B3D008E9359 /* GIGHashtag.h in Headers */,
+				9978105717DF1DE5008E9359 /* GIGEntities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +544,13 @@
 			files = (
 				9978100617DEF589008E9359 /* Gig.h in Headers */,
 				9978100717DEF589008E9359 /* GIGSize.h in Headers */,
+				9978101717DEF90B008E9359 /* GIGSizes.h in Headers */,
+				9978102017DF0227008E9359 /* GIGUserMention.h in Headers */,
+				9978102917DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */,
+				9978103C17DF1365008E9359 /* GIGURL.h in Headers */,
+				9978104617DF160A008E9359 /* GIGMedia.h in Headers */,
+				9978104F17DF1B3D008E9359 /* GIGHashtag.h in Headers */,
+				9978105817DF1DE5008E9359 /* GIGEntities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +760,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9978100517DEF55E008E9359 /* GIGSize.m in Sources */,
+				9978101917DEF90B008E9359 /* GIGSizes.m in Sources */,
+				9978102217DF0227008E9359 /* GIGUserMention.m in Sources */,
+				9978102B17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */,
+				9978103E17DF1365008E9359 /* GIGURL.m in Sources */,
+				9978104817DF160A008E9359 /* GIGMedia.m in Sources */,
+				9978105117DF1B3D008E9359 /* GIGHashtag.m in Sources */,
+				9978105A17DF1DE5008E9359 /* GIGEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,6 +775,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9978100D17DEF612008E9359 /* GIGSizeTests.m in Sources */,
+				9978101C17DEFD8A008E9359 /* GIGSizesTests.m in Sources */,
+				9978102517DF0258008E9359 /* GIGUserMentionTests.m in Sources */,
+				9978102E17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */,
+				9978104217DF1396008E9359 /* GIGURLTests.m in Sources */,
+				9978104B17DF162F008E9359 /* GIGMediaTests.m in Sources */,
+				9978105417DF1B69008E9359 /* GIGHashtagTests.m in Sources */,
+				9978105D17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +790,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9925E33817DE0AC50097A2B9 /* GIGSize.m in Sources */,
+				9978101817DEF90B008E9359 /* GIGSizes.m in Sources */,
+				9978102117DF0227008E9359 /* GIGUserMention.m in Sources */,
+				9978102A17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */,
+				9978103D17DF1365008E9359 /* GIGURL.m in Sources */,
+				9978104717DF160A008E9359 /* GIGMedia.m in Sources */,
+				9978105017DF1B3D008E9359 /* GIGHashtag.m in Sources */,
+				9978105917DF1DE5008E9359 /* GIGEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +805,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9925E33D17DE0C880097A2B9 /* GIGSizeTests.m in Sources */,
+				9978101B17DEFD8A008E9359 /* GIGSizesTests.m in Sources */,
+				9978102417DF0258008E9359 /* GIGUserMentionTests.m in Sources */,
+				9978102D17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */,
+				9978104117DF1396008E9359 /* GIGURLTests.m in Sources */,
+				9978104A17DF162F008E9359 /* GIGMediaTests.m in Sources */,
+				9978105317DF1B69008E9359 /* GIGHashtagTests.m in Sources */,
+				9978105C17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,6 +1083,7 @@
 				99780FFA17DEF2FE008E9359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9978100117DEF2FE008E9359 /* Build configuration list for PBXNativeTarget "Gig Mac Tests" */ = {
 			isa = XCConfigurationList;
@@ -941,6 +1092,7 @@
 				99780FFC17DEF2FE008E9359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99F2455B17DDB0C100541C24 /* Build configuration list for PBXProject "Gig" */ = {
 			isa = XCConfigurationList;
