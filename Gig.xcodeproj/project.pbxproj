@@ -64,6 +64,12 @@
 		9978105117DF1B3D008E9359 /* GIGHashtag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978104D17DF1B3C008E9359 /* GIGHashtag.m */; };
 		9978105317DF1B69008E9359 /* GIGHashtagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105217DF1B69008E9359 /* GIGHashtagTests.m */; };
 		9978105417DF1B69008E9359 /* GIGHashtagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105217DF1B69008E9359 /* GIGHashtagTests.m */; };
+		9978105717DF1DE5008E9359 /* GIGEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978105517DF1DE4008E9359 /* GIGEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978105817DF1DE5008E9359 /* GIGEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978105517DF1DE4008E9359 /* GIGEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978105917DF1DE5008E9359 /* GIGEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105617DF1DE4008E9359 /* GIGEntities.m */; };
+		9978105A17DF1DE5008E9359 /* GIGEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105617DF1DE4008E9359 /* GIGEntities.m */; };
+		9978105C17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */; };
+		9978105D17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */; };
 		9978C5E417DDF93D004F7EBF /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E317DDF93D004F7EBF /* libAFNetworking.a */; };
 		9978C5E617DDF944004F7EBF /* libMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E517DDF944004F7EBF /* libMantle.a */; };
 		9978C5E817DDF94E004F7EBF /* libOHHTTPStubs-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */; };
@@ -176,6 +182,9 @@
 		9978104C17DF1B3C008E9359 /* GIGHashtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGHashtag.h; sourceTree = "<group>"; };
 		9978104D17DF1B3C008E9359 /* GIGHashtag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGHashtag.m; sourceTree = "<group>"; };
 		9978105217DF1B69008E9359 /* GIGHashtagTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGHashtagTests.m; sourceTree = "<group>"; };
+		9978105517DF1DE4008E9359 /* GIGEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGEntities.h; sourceTree = "<group>"; };
+		9978105617DF1DE4008E9359 /* GIGEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGEntities.m; sourceTree = "<group>"; };
+		9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGEntitiesTests.m; sourceTree = "<group>"; };
 		9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Overcoat.xcodeproj; path = Overcoat/Overcoat.xcodeproj; sourceTree = "<group>"; };
 		9978C5BE17DDF7F4004F7EBF /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		9978C5C017DDF7F4004F7EBF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -292,6 +301,8 @@
 				9978104417DF1609008E9359 /* GIGMedia.m */,
 				9978104C17DF1B3C008E9359 /* GIGHashtag.h */,
 				9978104D17DF1B3C008E9359 /* GIGHashtag.m */,
+				9978105517DF1DE4008E9359 /* GIGEntities.h */,
+				9978105617DF1DE4008E9359 /* GIGEntities.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -340,6 +351,7 @@
 				9978104017DF1396008E9359 /* GIGURLTests.m */,
 				9978104917DF162F008E9359 /* GIGMediaTests.m */,
 				9978105217DF1B69008E9359 /* GIGHashtagTests.m */,
+				9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -522,6 +534,7 @@
 				9978103B17DF1365008E9359 /* GIGURL.h in Headers */,
 				9978104517DF160A008E9359 /* GIGMedia.h in Headers */,
 				9978104E17DF1B3D008E9359 /* GIGHashtag.h in Headers */,
+				9978105717DF1DE5008E9359 /* GIGEntities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +550,7 @@
 				9978103C17DF1365008E9359 /* GIGURL.h in Headers */,
 				9978104617DF160A008E9359 /* GIGMedia.h in Headers */,
 				9978104F17DF1B3D008E9359 /* GIGHashtag.h in Headers */,
+				9978105817DF1DE5008E9359 /* GIGEntities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -752,6 +766,7 @@
 				9978103E17DF1365008E9359 /* GIGURL.m in Sources */,
 				9978104817DF160A008E9359 /* GIGMedia.m in Sources */,
 				9978105117DF1B3D008E9359 /* GIGHashtag.m in Sources */,
+				9978105A17DF1DE5008E9359 /* GIGEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +781,7 @@
 				9978104217DF1396008E9359 /* GIGURLTests.m in Sources */,
 				9978104B17DF162F008E9359 /* GIGMediaTests.m in Sources */,
 				9978105417DF1B69008E9359 /* GIGHashtagTests.m in Sources */,
+				9978105D17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +796,7 @@
 				9978103D17DF1365008E9359 /* GIGURL.m in Sources */,
 				9978104717DF160A008E9359 /* GIGMedia.m in Sources */,
 				9978105017DF1B3D008E9359 /* GIGHashtag.m in Sources */,
+				9978105917DF1DE5008E9359 /* GIGEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +811,7 @@
 				9978104117DF1396008E9359 /* GIGURLTests.m in Sources */,
 				9978104A17DF162F008E9359 /* GIGMediaTests.m in Sources */,
 				9978105317DF1B69008E9359 /* GIGHashtagTests.m in Sources */,
+				9978105C17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
