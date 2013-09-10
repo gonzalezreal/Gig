@@ -12,6 +12,12 @@
 		9925E33D17DE0C880097A2B9 /* GIGSizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9925E33C17DE0C880097A2B9 /* GIGSizeTests.m */; };
 		99427EAE17DE0E5800020DA0 /* Gig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9925E33F17DE0DB00097A2B9 /* Gig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99427EAF17DE0E5F00020DA0 /* GIGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 9925E33617DE0AC50097A2B9 /* GIGSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		997607F617DF437E002D9951 /* GIGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 997607F417DF437E002D9951 /* GIGGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		997607F717DF437E002D9951 /* GIGGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 997607F417DF437E002D9951 /* GIGGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		997607F817DF437E002D9951 /* GIGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 997607F517DF437E002D9951 /* GIGGeometry.m */; };
+		997607F917DF437E002D9951 /* GIGGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 997607F517DF437E002D9951 /* GIGGeometry.m */; };
+		997607FC17DF43B7002D9951 /* GIGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 997607FB17DF43B7002D9951 /* GIGGeometryTests.m */; };
+		997607FD17DF43B7002D9951 /* GIGGeometryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 997607FB17DF43B7002D9951 /* GIGGeometryTests.m */; };
 		99780FD617DEF2FD008E9359 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99780FD517DEF2FD008E9359 /* Cocoa.framework */; };
 		99780FE017DEF2FD008E9359 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99780FDE17DEF2FD008E9359 /* InfoPlist.strings */; };
 		99780FEB17DEF2FE008E9359 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2457217DDB0C100541C24 /* SenTestingKit.framework */; };
@@ -153,6 +159,9 @@
 		9925E33C17DE0C880097A2B9 /* GIGSizeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGSizeTests.m; sourceTree = "<group>"; };
 		9925E33E17DE0CCC0097A2B9 /* GigTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GigTests-Prefix.pch"; sourceTree = "<group>"; };
 		9925E33F17DE0DB00097A2B9 /* Gig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gig.h; sourceTree = "<group>"; };
+		997607F417DF437E002D9951 /* GIGGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGGeometry.h; sourceTree = "<group>"; };
+		997607F517DF437E002D9951 /* GIGGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGGeometry.m; sourceTree = "<group>"; };
+		997607FB17DF43B7002D9951 /* GIGGeometryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGGeometryTests.m; sourceTree = "<group>"; };
 		99780FD417DEF2FD008E9359 /* Gig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99780FD517DEF2FD008E9359 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		99780FD817DEF2FD008E9359 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -281,6 +290,7 @@
 		9925E33517DE0A8E0097A2B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				997607F117DF4366002D9951 /* Places */,
 				9925E33917DE0C200097A2B9 /* Entities */,
 			);
 			name = Models;
@@ -310,9 +320,27 @@
 		9925E33A17DE0C500097A2B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				997607FA17DF43A2002D9951 /* Places */,
 				9978103F17DF137B008E9359 /* Entities */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		997607F117DF4366002D9951 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				997607F417DF437E002D9951 /* GIGGeometry.h */,
+				997607F517DF437E002D9951 /* GIGGeometry.m */,
+			);
+			name = Places;
+			sourceTree = "<group>";
+		};
+		997607FA17DF43A2002D9951 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				997607FB17DF43B7002D9951 /* GIGGeometryTests.m */,
+			);
+			name = Places;
 			sourceTree = "<group>";
 		};
 		99780FD717DEF2FD008E9359 /* Other Frameworks */ = {
@@ -535,6 +563,7 @@
 				9978104517DF160A008E9359 /* GIGMedia.h in Headers */,
 				9978104E17DF1B3D008E9359 /* GIGHashtag.h in Headers */,
 				9978105717DF1DE5008E9359 /* GIGEntities.h in Headers */,
+				997607F617DF437E002D9951 /* GIGGeometry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +580,7 @@
 				9978104617DF160A008E9359 /* GIGMedia.h in Headers */,
 				9978104F17DF1B3D008E9359 /* GIGHashtag.h in Headers */,
 				9978105817DF1DE5008E9359 /* GIGEntities.h in Headers */,
+				997607F717DF437E002D9951 /* GIGGeometry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +797,7 @@
 				9978104817DF160A008E9359 /* GIGMedia.m in Sources */,
 				9978105117DF1B3D008E9359 /* GIGHashtag.m in Sources */,
 				9978105A17DF1DE5008E9359 /* GIGEntities.m in Sources */,
+				997607F917DF437E002D9951 /* GIGGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +813,7 @@
 				9978104B17DF162F008E9359 /* GIGMediaTests.m in Sources */,
 				9978105417DF1B69008E9359 /* GIGHashtagTests.m in Sources */,
 				9978105D17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
+				997607FD17DF43B7002D9951 /* GIGGeometryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +829,7 @@
 				9978104717DF160A008E9359 /* GIGMedia.m in Sources */,
 				9978105017DF1B3D008E9359 /* GIGHashtag.m in Sources */,
 				9978105917DF1DE5008E9359 /* GIGEntities.m in Sources */,
+				997607F817DF437E002D9951 /* GIGGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +845,7 @@
 				9978104A17DF162F008E9359 /* GIGMediaTests.m in Sources */,
 				9978105317DF1B69008E9359 /* GIGHashtagTests.m in Sources */,
 				9978105C17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
+				997607FC17DF43B7002D9951 /* GIGGeometryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

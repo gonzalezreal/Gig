@@ -1,5 +1,5 @@
-// Gig.h
-//
+// GIGGeometry.h
+// 
 // Copyright (c) 2013 Guillermo Gonzalez
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-//
+// 
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-//
+// 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,19 +20,34 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef _GIG_H
-#define _GIG_H
+#import <Mantle/Mantle.h>
 
-#import "GIGSize.h"
-#import "GIGSizes.h"
-#import "GIGUserMention.h"
-#import "GIGURL.h"
-#import "GIGMedia.h"
-#import "GIGHashtag.h"
-#import "GIGEntities.h"
+//
+// GeoJSON geometry. See http://www.geojson.org/geojson-spec.html.
+//
+// Used to represent the geographic location of a Tweet or the
+// bounding box which encloses a Place.
+//
+@interface GIGGeometry : MTLModel <MTLJSONSerializing>
 
-#import "GIGGeometry.h"
+// For geographic locations:
+//
+// The longitude and latitude of the Tweet location, as an collection in
+// the form of [longitude, latitude].
+//
+// For bounding boxes:
+//
+// A series of longitude and latitude points, defining a box which will
+// contain the Place entity this bounding box is related to. Each point
+// is an array in the form of [longitude, latitude]. Points are grouped
+// into an array per bounding box. Bounding box arrays are wrapped in
+// one additional array to be compatible with the polygon notation.
+@property (copy, nonatomic, readonly) NSArray *coordinates;
 
-#import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
+// The type of data encoded in the coordinates property.
+//
+// This will be "Point" for Tweet coordinates fields and "Polygon"
+// for bounding boxes.
+@property (copy, nonatomic, readonly) NSString *type;
 
-#endif /* _GIG_H */
+@end
