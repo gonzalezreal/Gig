@@ -34,6 +34,18 @@
 		9978101917DEF90B008E9359 /* GIGSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101517DEF90B008E9359 /* GIGSizes.m */; };
 		9978101B17DEFD8A008E9359 /* GIGSizesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101A17DEFD8A008E9359 /* GIGSizesTests.m */; };
 		9978101C17DEFD8A008E9359 /* GIGSizesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101A17DEFD8A008E9359 /* GIGSizesTests.m */; };
+		9978101F17DF0227008E9359 /* GIGUserMention.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978101D17DF0227008E9359 /* GIGUserMention.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978102017DF0227008E9359 /* GIGUserMention.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978101D17DF0227008E9359 /* GIGUserMention.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9978102117DF0227008E9359 /* GIGUserMention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101E17DF0227008E9359 /* GIGUserMention.m */; };
+		9978102217DF0227008E9359 /* GIGUserMention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978101E17DF0227008E9359 /* GIGUserMention.m */; };
+		9978102417DF0258008E9359 /* GIGUserMentionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102317DF0258008E9359 /* GIGUserMentionTests.m */; };
+		9978102517DF0258008E9359 /* GIGUserMentionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102317DF0258008E9359 /* GIGUserMentionTests.m */; };
+		9978102817DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */; };
+		9978102917DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */; };
+		9978102A17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */; };
+		9978102B17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */; };
+		9978102D17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */; };
+		9978102E17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */; };
 		9978C5E417DDF93D004F7EBF /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E317DDF93D004F7EBF /* libAFNetworking.a */; };
 		9978C5E617DDF944004F7EBF /* libMantle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E517DDF944004F7EBF /* libMantle.a */; };
 		9978C5E817DDF94E004F7EBF /* libOHHTTPStubs-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */; };
@@ -127,10 +139,16 @@
 		9978100217DEF405008E9359 /* Gig-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gig-Info.plist"; sourceTree = "<group>"; };
 		9978100817DEF5D5008E9359 /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Gig-cnrthfogmcrdlphgoriaetnpswct/Build/Products/Debug/Mantle.framework"; sourceTree = "<group>"; };
 		9978100A17DEF5DC008E9359 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Gig-cnrthfogmcrdlphgoriaetnpswct/Build/Products/Debug/AFNetworking.framework"; sourceTree = "<group>"; };
-		9978101117DEF65B008E9359 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = OHHTTPStubs.framework; path = Overcoat/OvercoatTests/OHHTTPStubs/OHHTTPStubs/build/Release/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		9978101117DEF65B008E9359 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Overcoat/OvercoatTests/OHHTTPStubs/OHHTTPStubs/build/Release/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		9978101417DEF90B008E9359 /* GIGSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGSizes.h; sourceTree = "<group>"; };
 		9978101517DEF90B008E9359 /* GIGSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGSizes.m; sourceTree = "<group>"; };
 		9978101A17DEFD8A008E9359 /* GIGSizesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGSizesTests.m; sourceTree = "<group>"; };
+		9978101D17DF0227008E9359 /* GIGUserMention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUserMention.h; sourceTree = "<group>"; };
+		9978101E17DF0227008E9359 /* GIGUserMention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserMention.m; sourceTree = "<group>"; };
+		9978102317DF0258008E9359 /* GIGUserMentionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserMentionTests.m; sourceTree = "<group>"; };
+		9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+GIGPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
+		9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+GIGPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
+		9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerAdditionsTests.m; sourceTree = "<group>"; };
 		9978C5A817DDF7E2004F7EBF /* Overcoat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Overcoat.xcodeproj; path = Overcoat/Overcoat.xcodeproj; sourceTree = "<group>"; };
 		9978C5BE17DDF7F4004F7EBF /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		9978C5C017DDF7F4004F7EBF /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -239,6 +257,8 @@
 				9925E33717DE0AC50097A2B9 /* GIGSize.m */,
 				9978101417DEF90B008E9359 /* GIGSizes.h */,
 				9978101517DEF90B008E9359 /* GIGSizes.m */,
+				9978101D17DF0227008E9359 /* GIGUserMention.h */,
+				9978101E17DF0227008E9359 /* GIGUserMention.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -248,6 +268,7 @@
 			children = (
 				9925E33C17DE0C880097A2B9 /* GIGSizeTests.m */,
 				9978101A17DEFD8A008E9359 /* GIGSizesTests.m */,
+				9978102317DF0258008E9359 /* GIGUserMentionTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -260,6 +281,23 @@
 				99780FDA17DEF2FD008E9359 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9978102F17DF0828008E9359 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				9978102C17DF0825008E9359 /* NSValueTransformerAdditionsTests.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		9978103017DF0834008E9359 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */,
+				9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */,
+			);
+			name = Transformers;
 			sourceTree = "<group>";
 		};
 		9978C5A917DDF7E2004F7EBF /* Products */ = {
@@ -389,6 +427,7 @@
 			children = (
 				9925E33F17DE0DB00097A2B9 /* Gig.h */,
 				9925E33517DE0A8E0097A2B9 /* Models */,
+				9978103017DF0834008E9359 /* Transformers */,
 				99F2456617DDB0C100541C24 /* Supporting Files */,
 			);
 			path = Gig;
@@ -408,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				9925E33A17DE0C500097A2B9 /* Models */,
+				9978102F17DF0828008E9359 /* Transformers */,
 				99F2457B17DDB0C100541C24 /* Supporting Files */,
 			);
 			path = GigTests;
@@ -433,6 +473,8 @@
 				99427EAE17DE0E5800020DA0 /* Gig.h in Headers */,
 				99427EAF17DE0E5F00020DA0 /* GIGSize.h in Headers */,
 				9978101617DEF90B008E9359 /* GIGSizes.h in Headers */,
+				9978101F17DF0227008E9359 /* GIGUserMention.h in Headers */,
+				9978102817DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +485,8 @@
 				9978100617DEF589008E9359 /* Gig.h in Headers */,
 				9978100717DEF589008E9359 /* GIGSize.h in Headers */,
 				9978101717DEF90B008E9359 /* GIGSizes.h in Headers */,
+				9978102017DF0227008E9359 /* GIGUserMention.h in Headers */,
+				9978102917DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,6 +697,8 @@
 			files = (
 				9978100517DEF55E008E9359 /* GIGSize.m in Sources */,
 				9978101917DEF90B008E9359 /* GIGSizes.m in Sources */,
+				9978102217DF0227008E9359 /* GIGUserMention.m in Sources */,
+				9978102B17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +708,8 @@
 			files = (
 				9978100D17DEF612008E9359 /* GIGSizeTests.m in Sources */,
 				9978101C17DEFD8A008E9359 /* GIGSizesTests.m in Sources */,
+				9978102517DF0258008E9359 /* GIGUserMentionTests.m in Sources */,
+				9978102E17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +719,8 @@
 			files = (
 				9925E33817DE0AC50097A2B9 /* GIGSize.m in Sources */,
 				9978101817DEF90B008E9359 /* GIGSizes.m in Sources */,
+				9978102117DF0227008E9359 /* GIGUserMention.m in Sources */,
+				9978102A17DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +730,8 @@
 			files = (
 				9925E33D17DE0C880097A2B9 /* GIGSizeTests.m in Sources */,
 				9978101B17DEFD8A008E9359 /* GIGSizesTests.m in Sources */,
+				9978102417DF0258008E9359 /* GIGUserMentionTests.m in Sources */,
+				9978102D17DF0825008E9359 /* NSValueTransformerAdditionsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -951,6 +1003,7 @@
 				99780FFA17DEF2FE008E9359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9978100117DEF2FE008E9359 /* Build configuration list for PBXNativeTarget "Gig Mac Tests" */ = {
 			isa = XCConfigurationList;
@@ -959,6 +1012,7 @@
 				99780FFC17DEF2FE008E9359 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99F2455B17DDB0C100541C24 /* Build configuration list for PBXProject "Gig" */ = {
 			isa = XCConfigurationList;
