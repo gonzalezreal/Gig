@@ -1,5 +1,5 @@
-// Gig.h
-//
+// GIGContributor.h
+// 
 // Copyright (c) 2013 Guillermo Gonzalez
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-//
+// 
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-//
+// 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,22 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef _GIG_H
-#define _GIG_H
+#import <Mantle/Mantle.h>
 
-#import "GIGSize.h"
-#import "GIGSizes.h"
-#import "GIGUserMention.h"
-#import "GIGURL.h"
-#import "GIGMedia.h"
-#import "GIGHashtag.h"
-#import "GIGEntities.h"
+//
+// Brief information about a user who contributed to the authorship
+// of a Tweet, on behalf of the official author.
+//
+@interface GIGContributor : MTLModel <MTLJSONSerializing>
 
-#import "GIGGeometry.h"
-#import "GIGPlace.h"
+// ID of the user who contributed to the Tweet.
+@property (copy, nonatomic, readonly) NSNumber *userID;
 
-#import "GIGContributor.h"
+// The screen name of the user who contributed to the Tweet.
+@property (copy, nonatomic, readonly) NSString *screenName;
 
-#import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
-
-#endif /* _GIG_H */
+@end
