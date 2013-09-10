@@ -32,6 +32,7 @@
 #import "GIGEntities.h"
 
 #import "GIGGeometry.h"
+#import "GIGPlace.h"
 
 #import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
 
