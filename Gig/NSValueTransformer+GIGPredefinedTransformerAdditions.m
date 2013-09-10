@@ -21,11 +21,13 @@
 // THE SOFTWARE.
 
 #import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
+#import "GIGColor.h"
 
 #import <Mantle/Mantle.h>
 
 NSString * const GIGRangeValueTransformerName = @"GIGRangeValueTransformerName";
 NSString * const GIGDateValueTransformerName = @"GIGDateValueTransformerName";
+NSString * const GIGColorValueTransformerName = @"GIGColorValueTransformerName";
 
 static NSDateFormatter *GIGTwitterDateFormatter() {
     static dispatch_once_t onceToken;
@@ -94,6 +96,21 @@ static NSDateFormatter *GIGTwitterDateFormatter() {
         }];
 
         [NSValueTransformer setValueTransformer:dateValueTransformer forName:GIGDateValueTransformerName];
+
+        //
+        // GIGColorValueTransformerName
+        //
+
+        MTLValueTransformer *colorValueTransformer = [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
+            if ([value isKindOfClass:[NSString class]]) {
+                return GIGColorFromString(value);
+            }
+            return nil;
+        } reverseBlock:^id(id color) {
+            return GIGStringFromColor(color);
+        }];
+
+        [NSValueTransformer setValueTransformer:colorValueTransformer forName:GIGColorValueTransformerName];
     }
 }
 

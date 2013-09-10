@@ -30,6 +30,10 @@
 		9976080C17DF5082002D9951 /* GIGContributor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080817DF5082002D9951 /* GIGContributor.m */; };
 		9976080E17DF50F7002D9951 /* GIGContributorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080D17DF50F7002D9951 /* GIGContributorTests.m */; };
 		9976080F17DF50F7002D9951 /* GIGContributorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080D17DF50F7002D9951 /* GIGContributorTests.m */; };
+		9976081817DF581C002D9951 /* GIGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976081617DF581C002D9951 /* GIGColor.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9976081A17DF581C002D9951 /* GIGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976081717DF581C002D9951 /* GIGColor.m */; };
+		9976081C17DF5CA1002D9951 /* GIGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976081617DF581C002D9951 /* GIGColor.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		9976081D17DF5CA7002D9951 /* GIGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976081717DF581C002D9951 /* GIGColor.m */; };
 		99780FD617DEF2FD008E9359 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99780FD517DEF2FD008E9359 /* Cocoa.framework */; };
 		99780FE017DEF2FD008E9359 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99780FDE17DEF2FD008E9359 /* InfoPlist.strings */; };
 		99780FEB17DEF2FE008E9359 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2457217DDB0C100541C24 /* SenTestingKit.framework */; };
@@ -180,6 +184,8 @@
 		9976080717DF5082002D9951 /* GIGContributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGContributor.h; sourceTree = "<group>"; };
 		9976080817DF5082002D9951 /* GIGContributor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGContributor.m; sourceTree = "<group>"; };
 		9976080D17DF50F7002D9951 /* GIGContributorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGContributorTests.m; sourceTree = "<group>"; };
+		9976081617DF581C002D9951 /* GIGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGColor.h; sourceTree = "<group>"; };
+		9976081717DF581C002D9951 /* GIGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGColor.m; sourceTree = "<group>"; };
 		99780FD417DEF2FD008E9359 /* Gig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99780FD517DEF2FD008E9359 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		99780FD817DEF2FD008E9359 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -388,6 +394,8 @@
 		9978103017DF0834008E9359 /* Transformers */ = {
 			isa = PBXGroup;
 			children = (
+				9976081617DF581C002D9951 /* GIGColor.h */,
+				9976081717DF581C002D9951 /* GIGColor.m */,
 				9978102617DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.h */,
 				9978102717DF06A6008E9359 /* NSValueTransformer+GIGPredefinedTransformerAdditions.m */,
 			);
@@ -590,6 +598,7 @@
 				997607F617DF437E002D9951 /* GIGGeometry.h in Headers */,
 				9976080017DF4A9E002D9951 /* GIGPlace.h in Headers */,
 				9976080917DF5082002D9951 /* GIGContributor.h in Headers */,
+				9976081817DF581C002D9951 /* GIGColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +618,7 @@
 				997607F717DF437E002D9951 /* GIGGeometry.h in Headers */,
 				9976080117DF4A9E002D9951 /* GIGPlace.h in Headers */,
 				9976080A17DF5082002D9951 /* GIGContributor.h in Headers */,
+				9976081C17DF5CA1002D9951 /* GIGColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +838,7 @@
 				997607F917DF437E002D9951 /* GIGGeometry.m in Sources */,
 				9976080317DF4A9E002D9951 /* GIGPlace.m in Sources */,
 				9976080C17DF5082002D9951 /* GIGContributor.m in Sources */,
+				9976081D17DF5CA7002D9951 /* GIGColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +875,7 @@
 				997607F817DF437E002D9951 /* GIGGeometry.m in Sources */,
 				9976080217DF4A9E002D9951 /* GIGPlace.m in Sources */,
 				9976080B17DF5082002D9951 /* GIGContributor.m in Sources */,
+				9976081A17DF581C002D9951 /* GIGColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
