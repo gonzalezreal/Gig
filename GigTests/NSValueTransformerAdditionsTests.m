@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 Guillermo Gonzalez. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE
+    #import <UIKit/UIKit.h>
+#else
+    #import <Cocoa/Cocoa.h>
+#endif
+
 @interface NSValueTransformerAdditionsTests : SenTestCase
 
 @end
@@ -52,6 +58,35 @@
 
     STAssertEqualObjects([transformer reverseTransformedValue:date], @"Wed Aug 27 13:08:45 +0000 2008", nil);
     STAssertNil([transformer reverseTransformedValue:nil], nil);
+}
+
+- (void)testColorValueTransformer {
+    NSValueTransformer *transformer = [NSValueTransformer valueTransformerForName:GIGColorValueTransformerName];
+    STAssertNotNil(transformer, nil);
+    STAssertTrue([transformer.class allowsReverseTransformation], nil);
+
+#if TARGET_OS_IPHONE
+    UIColor *color = [UIColor colorWithRed:169 / 255.f green:217 / 255.f blue:241 / 255.f alpha:1.f];
+    UIColor *grayColor = [UIColor colorWithWhite:128 / 255.f alpha:1];
+#else
+    NSColor *color = [NSColor colorWithCalibratedRed:169 / 255.f green:217 / 255.f blue:241 / 255.f alpha:1.f];
+    NSColor *grayColor = [NSColor colorWithCalibratedWhite:128 / 255.f alpha:1];
+#endif
+
+    id transformedColor = [transformer transformedValue:@"a9d9f1"];
+    STAssertEqualObjects(color, transformedColor, nil);
+
+    transformedColor = [transformer transformedValue:nil];
+    STAssertNil(transformedColor, nil);
+
+    NSString *hexString = [transformer reverseTransformedValue:color];
+    STAssertEqualObjects(hexString, @"a9d9f1", nil);
+
+    hexString = [transformer reverseTransformedValue:grayColor];
+    STAssertEqualObjects(hexString, @"808080", nil);
+
+    hexString = [transformer reverseTransformedValue:nil];
+    STAssertNil(hexString, nil);
 }
 
 @end
