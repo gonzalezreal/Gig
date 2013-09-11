@@ -24,9 +24,7 @@
 
 @class GIGSize;
 
-//
 // Media file sizes.
-//
 @interface GIGSizes : MTLModel <MTLJSONSerializing>
 
 // Information for a thumbnail-sized version of the media.

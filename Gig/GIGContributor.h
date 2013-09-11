@@ -22,10 +22,8 @@
 
 #import <Mantle/Mantle.h>
 
-//
 // Brief information about a user who contributed to the authorship
 // of a Tweet, on behalf of the official author.
-//
 @interface GIGContributor : MTLModel <MTLJSONSerializing>
 
 // ID of the user who contributed to the Tweet.

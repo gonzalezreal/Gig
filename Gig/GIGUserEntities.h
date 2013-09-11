@@ -22,10 +22,8 @@
 
 #import <Mantle/Mantle.h>
 
-//
 // Entities for User Objects describe URLs that appear in the user-defined profile URL
 // and about fields. They do not describe hashtags or user mentions.
-//
 @interface GIGUserEntities : MTLModel <MTLJSONSerializing>
 
 // Represents URLs that appear in the user-defined profile URL.

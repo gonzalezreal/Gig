@@ -27,7 +27,6 @@
 @class GIGPlace;
 @class GIGUser;
 
-//
 // Tweets are the basic atomic building block of all things Twitter. Users tweet
 // Tweets, also known more generically as "status updates." Tweets can be embedded,
 // replied to, favorited, unfavorited and deleted.
@@ -37,7 +36,6 @@
 // 'retweetedStatus' attribute. This attribute contains a representation of the
 // original Tweet that was retweeted. Users can also unretweet a retweet they
 // created by deleting their retweet.
-//
 @interface GIGTweet : MTLModel <MTLJSONSerializing>
 
 // Unique identifier for this Tweet.
