@@ -22,12 +22,10 @@
 
 #import <Mantle/Mantle.h>
 
-//
 // GeoJSON geometry. See http://www.geojson.org/geojson-spec.html.
 //
 // Used to represent the geographic location of a Tweet or the
 // bounding box which encloses a Place.
-//
 @interface GIGGeometry : MTLModel <MTLJSONSerializing>
 
 // For geographic locations:

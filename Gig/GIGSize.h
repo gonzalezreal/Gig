@@ -23,9 +23,7 @@
 #import <Mantle/Mantle.h>
 #import <CoreGraphics/CoreGraphics.h>
 
-//
 // Media file size.
-//
 @interface GIGSize : MTLModel <MTLJSONSerializing>
 
 // Width in pixels of this size.

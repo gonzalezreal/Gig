@@ -60,9 +60,7 @@ extern NSString * const GIGPlaceAttributeTwitterKey;
 // The official/canonical URL for the place.
 extern NSString * const GIGPlaceAttributeURLKey;
 
-//
 // Places are specific, named locations with corresponding geo coordinates.
-//
 @interface GIGPlace : MTLModel <MTLJSONSerializing>
 
 // ID representing this place.

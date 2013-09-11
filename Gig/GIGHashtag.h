@@ -22,9 +22,7 @@
 
 #import <Mantle/Mantle.h>
 
-//
 // Represents hashtags which have been parsed out of the Tweet text.
-//
 @interface GIGHashtag : MTLModel <MTLJSONSerializing>
 
 // The range of the hashtag in the Tweet text, including the leading '#' character.

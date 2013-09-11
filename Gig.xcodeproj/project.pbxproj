@@ -114,6 +114,12 @@
 		9978C5F117DE0185004F7EBF /* libOvercoat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5B517DDF7E3004F7EBF /* libOvercoat.a */; };
 		9978C5F317DE0221004F7EBF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5F217DE0221004F7EBF /* Accounts.framework */; };
 		9978C5F517DE0229004F7EBF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5F417DE0229004F7EBF /* Social.framework */; };
+		99A06D1A17E0724A0042B1AB /* GIGClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A06D1817E0724A0042B1AB /* GIGClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99A06D1B17E0724A0042B1AB /* GIGClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A06D1817E0724A0042B1AB /* GIGClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99A06D1C17E0724A0042B1AB /* GIGClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A06D1917E0724A0042B1AB /* GIGClient.m */; };
+		99A06D1D17E0724A0042B1AB /* GIGClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A06D1917E0724A0042B1AB /* GIGClient.m */; };
+		99A06D1F17E072A80042B1AB /* GIGClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A06D1E17E072A80042B1AB /* GIGClientTests.m */; };
+		99A06D2017E072A80042B1AB /* GIGClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A06D1E17E072A80042B1AB /* GIGClientTests.m */; };
 		99DDE2F917E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99DDE2FA17E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99DDE2FB17E05A3C002682B1 /* GIGUserEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */; };
@@ -125,6 +131,9 @@
 		99F2457617DDB0C100541C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2456317DDB0C100541C24 /* Foundation.framework */; };
 		99F2457917DDB0C100541C24 /* libGig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2456017DDB0C100541C24 /* libGig.a */; };
 		99F2457F17DDB0C100541C24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99F2457D17DDB0C100541C24 /* InfoPlist.strings */; };
+		99FEFF3D17E0A66500AE0AA7 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 99FEFF3C17E0A66500AE0AA7 /* home_timeline.json */; };
+		99FEFF3E17E0A66500AE0AA7 /* home_timeline.json in Resources */ = {isa = PBXBuildFile; fileRef = 99FEFF3C17E0A66500AE0AA7 /* home_timeline.json */; };
+		99FEFF4217E0AC1300AE0AA7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99FEFF4117E0AC1300AE0AA7 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +277,9 @@
 		9978C5EF17DDFFC6004F7EBF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9978C5F217DE0221004F7EBF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9978C5F417DE0229004F7EBF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		99A06D1817E0724A0042B1AB /* GIGClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGClient.h; sourceTree = "<group>"; };
+		99A06D1917E0724A0042B1AB /* GIGClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGClient.m; sourceTree = "<group>"; };
+		99A06D1E17E072A80042B1AB /* GIGClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGClientTests.m; sourceTree = "<group>"; };
 		99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUserEntities.h; sourceTree = "<group>"; };
 		99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntities.m; sourceTree = "<group>"; };
 		99DDE2FF17E05A9E002682B1 /* GIGUserEntitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntitiesTests.m; sourceTree = "<group>"; };
@@ -278,6 +290,8 @@
 		99F2457217DDB0C100541C24 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		99F2457C17DDB0C100541C24 /* GigTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GigTests-Info.plist"; sourceTree = "<group>"; };
 		99F2457E17DDB0C100541C24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		99FEFF3C17E0A66500AE0AA7 /* home_timeline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home_timeline.json; sourceTree = "<group>"; };
+		99FEFF4117E0AC1300AE0AA7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Social.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FEFF4217E0AC1300AE0AA7 /* Social.framework in Frameworks */,
 				9978101217DEF65B008E9359 /* OHHTTPStubs.framework in Frameworks */,
 				9978101017DEF64B008E9359 /* Overcoat.framework in Frameworks */,
 				9978100F17DEF639008E9359 /* AFNetworking.framework in Frameworks */,
@@ -530,6 +545,7 @@
 		99F2455717DDB0C100541C24 = {
 			isa = PBXGroup;
 			children = (
+				99FEFF4117E0AC1300AE0AA7 /* Social.framework */,
 				99F2456517DDB0C100541C24 /* Gig */,
 				99F2457A17DDB0C100541C24 /* GigTests */,
 				99F2456217DDB0C100541C24 /* Frameworks */,
@@ -578,6 +594,8 @@
 			isa = PBXGroup;
 			children = (
 				9925E33F17DE0DB00097A2B9 /* Gig.h */,
+				99A06D1817E0724A0042B1AB /* GIGClient.h */,
+				99A06D1917E0724A0042B1AB /* GIGClient.m */,
 				9925E33517DE0A8E0097A2B9 /* Models */,
 				9978103017DF0834008E9359 /* Transformers */,
 				99F2456617DDB0C100541C24 /* Supporting Files */,
@@ -598,8 +616,10 @@
 		99F2457A17DDB0C100541C24 /* GigTests */ = {
 			isa = PBXGroup;
 			children = (
+				99A06D1E17E072A80042B1AB /* GIGClientTests.m */,
 				9925E33A17DE0C500097A2B9 /* Models */,
 				9978102F17DF0828008E9359 /* Transformers */,
+				99FEFF3B17E0A66500AE0AA7 /* Stubs */,
 				99F2457B17DDB0C100541C24 /* Supporting Files */,
 			);
 			path = GigTests;
@@ -613,6 +633,14 @@
 				99F2457D17DDB0C100541C24 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99FEFF3B17E0A66500AE0AA7 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				99FEFF3C17E0A66500AE0AA7 /* home_timeline.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -638,6 +666,7 @@
 				9976082017DF625F002D9951 /* GIGUser.h in Headers */,
 				9976082617DF626C002D9951 /* GIGTweet.h in Headers */,
 				99DDE2F917E05A3C002682B1 /* GIGUserEntities.h in Headers */,
+				99A06D1A17E0724A0042B1AB /* GIGClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +690,7 @@
 				9976082117DF625F002D9951 /* GIGUser.h in Headers */,
 				9976082717DF626C002D9951 /* GIGTweet.h in Headers */,
 				99DDE2FA17E05A3C002682B1 /* GIGUserEntities.h in Headers */,
+				99A06D1B17E0724A0042B1AB /* GIGClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,6 +852,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FEFF3E17E0A66500AE0AA7 /* home_timeline.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +861,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99F2457F17DDB0C100541C24 /* InfoPlist.strings in Resources */,
+				99FEFF3D17E0A66500AE0AA7 /* home_timeline.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,6 +916,7 @@
 				9976082317DF625F002D9951 /* GIGUser.m in Sources */,
 				9976082917DF626C002D9951 /* GIGTweet.m in Sources */,
 				99DDE2FC17E05A3C002682B1 /* GIGUserEntities.m in Sources */,
+				99A06D1D17E0724A0042B1AB /* GIGClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,6 +938,7 @@
 				9976082D17DF62C8002D9951 /* GIGTweetTests.m in Sources */,
 				9976082F17DF62C8002D9951 /* GIGUserTests.m in Sources */,
 				99DDE30117E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,
+				99A06D2017E072A80042B1AB /* GIGClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +961,7 @@
 				9976082217DF625F002D9951 /* GIGUser.m in Sources */,
 				9976082817DF626C002D9951 /* GIGTweet.m in Sources */,
 				99DDE2FB17E05A3C002682B1 /* GIGUserEntities.m in Sources */,
+				99A06D1C17E0724A0042B1AB /* GIGClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,6 +983,7 @@
 				9976082C17DF62C8002D9951 /* GIGTweetTests.m in Sources */,
 				9976082E17DF62C8002D9951 /* GIGUserTests.m in Sources */,
 				99DDE30017E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,
+				99A06D1F17E072A80042B1AB /* GIGClientTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
