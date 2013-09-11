@@ -1,5 +1,5 @@
-// Gig.h
-//
+// GIGUserEntities.m
+// 
 // Copyright (c) 2013 Guillermo Gonzalez
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -8,10 +8,10 @@
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-//
+// 
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-//
+// 
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -20,25 +20,24 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef _GIG_H
-#define _GIG_H
-
-#import "GIGSize.h"
-#import "GIGSizes.h"
-#import "GIGUserMention.h"
-#import "GIGURL.h"
-#import "GIGMedia.h"
-#import "GIGHashtag.h"
-#import "GIGEntities.h"
 #import "GIGUserEntities.h"
+#import "GIGURL.h"
 
-#import "GIGGeometry.h"
-#import "GIGPlace.h"
+@implementation GIGUserEntities
 
-#import "GIGContributor.h"
-#import "GIGUser.h"
-#import "GIGTweet.h"
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+            @"URLs" : @"url.urls",
+            @"aboutURLs" : @"description.urls"
+    };
+}
 
-#import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
++ (NSValueTransformer *)URLsJSONTransformer {
+    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:GIGURL.class];
+}
 
-#endif /* _GIG_H */
++ (NSValueTransformer *)aboutURLsJSONTransformer {
+    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:GIGURL.class];
+}
+
+@end
