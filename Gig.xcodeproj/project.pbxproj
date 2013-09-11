@@ -34,6 +34,18 @@
 		9976081A17DF581C002D9951 /* GIGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976081717DF581C002D9951 /* GIGColor.m */; };
 		9976081C17DF5CA1002D9951 /* GIGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976081617DF581C002D9951 /* GIGColor.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9976081D17DF5CA7002D9951 /* GIGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976081717DF581C002D9951 /* GIGColor.m */; };
+		9976082017DF625F002D9951 /* GIGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976081E17DF625F002D9951 /* GIGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9976082117DF625F002D9951 /* GIGUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976081E17DF625F002D9951 /* GIGUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9976082217DF625F002D9951 /* GIGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976081F17DF625F002D9951 /* GIGUser.m */; };
+		9976082317DF625F002D9951 /* GIGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976081F17DF625F002D9951 /* GIGUser.m */; };
+		9976082617DF626C002D9951 /* GIGTweet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976082417DF626C002D9951 /* GIGTweet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9976082717DF626C002D9951 /* GIGTweet.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976082417DF626C002D9951 /* GIGTweet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9976082817DF626C002D9951 /* GIGTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976082517DF626C002D9951 /* GIGTweet.m */; };
+		9976082917DF626C002D9951 /* GIGTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976082517DF626C002D9951 /* GIGTweet.m */; };
+		9976082C17DF62C8002D9951 /* GIGTweetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976082A17DF62C8002D9951 /* GIGTweetTests.m */; };
+		9976082D17DF62C8002D9951 /* GIGTweetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976082A17DF62C8002D9951 /* GIGTweetTests.m */; };
+		9976082E17DF62C8002D9951 /* GIGUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976082B17DF62C8002D9951 /* GIGUserTests.m */; };
+		9976082F17DF62C8002D9951 /* GIGUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976082B17DF62C8002D9951 /* GIGUserTests.m */; };
 		99780FD617DEF2FD008E9359 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99780FD517DEF2FD008E9359 /* Cocoa.framework */; };
 		99780FE017DEF2FD008E9359 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 99780FDE17DEF2FD008E9359 /* InfoPlist.strings */; };
 		99780FEB17DEF2FE008E9359 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2457217DDB0C100541C24 /* SenTestingKit.framework */; };
@@ -102,6 +114,12 @@
 		9978C5F117DE0185004F7EBF /* libOvercoat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5B517DDF7E3004F7EBF /* libOvercoat.a */; };
 		9978C5F317DE0221004F7EBF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5F217DE0221004F7EBF /* Accounts.framework */; };
 		9978C5F517DE0229004F7EBF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978C5F417DE0229004F7EBF /* Social.framework */; };
+		99DDE2F917E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99DDE2FA17E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99DDE2FB17E05A3C002682B1 /* GIGUserEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */; };
+		99DDE2FC17E05A3C002682B1 /* GIGUserEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */; };
+		99DDE30017E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDE2FF17E05A9E002682B1 /* GIGUserEntitiesTests.m */; };
+		99DDE30117E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDE2FF17E05A9E002682B1 /* GIGUserEntitiesTests.m */; };
 		99F2456417DDB0C100541C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2456317DDB0C100541C24 /* Foundation.framework */; };
 		99F2457317DDB0C100541C24 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2457217DDB0C100541C24 /* SenTestingKit.framework */; };
 		99F2457617DDB0C100541C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F2456317DDB0C100541C24 /* Foundation.framework */; };
@@ -186,6 +204,12 @@
 		9976080D17DF50F7002D9951 /* GIGContributorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGContributorTests.m; sourceTree = "<group>"; };
 		9976081617DF581C002D9951 /* GIGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGColor.h; sourceTree = "<group>"; };
 		9976081717DF581C002D9951 /* GIGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGColor.m; sourceTree = "<group>"; };
+		9976081E17DF625F002D9951 /* GIGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUser.h; sourceTree = "<group>"; };
+		9976081F17DF625F002D9951 /* GIGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUser.m; sourceTree = "<group>"; };
+		9976082417DF626C002D9951 /* GIGTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGTweet.h; sourceTree = "<group>"; };
+		9976082517DF626C002D9951 /* GIGTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGTweet.m; sourceTree = "<group>"; };
+		9976082A17DF62C8002D9951 /* GIGTweetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGTweetTests.m; sourceTree = "<group>"; };
+		9976082B17DF62C8002D9951 /* GIGUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserTests.m; sourceTree = "<group>"; };
 		99780FD417DEF2FD008E9359 /* Gig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Gig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99780FD517DEF2FD008E9359 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		99780FD817DEF2FD008E9359 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -244,6 +268,9 @@
 		9978C5EF17DDFFC6004F7EBF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9978C5F217DE0221004F7EBF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9978C5F417DE0229004F7EBF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUserEntities.h; sourceTree = "<group>"; };
+		99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntities.m; sourceTree = "<group>"; };
+		99DDE2FF17E05A9E002682B1 /* GIGUserEntitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntitiesTests.m; sourceTree = "<group>"; };
 		99F2456017DDB0C100541C24 /* libGig.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGig.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		99F2456317DDB0C100541C24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		99F2456717DDB0C100541C24 /* Gig-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gig-Prefix.pch"; sourceTree = "<group>"; };
@@ -318,6 +345,10 @@
 				9925E33917DE0C200097A2B9 /* Entities */,
 				9976080717DF5082002D9951 /* GIGContributor.h */,
 				9976080817DF5082002D9951 /* GIGContributor.m */,
+				9976081E17DF625F002D9951 /* GIGUser.h */,
+				9976081F17DF625F002D9951 /* GIGUser.m */,
+				9976082417DF626C002D9951 /* GIGTweet.h */,
+				9976082517DF626C002D9951 /* GIGTweet.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -339,6 +370,8 @@
 				9978104D17DF1B3C008E9359 /* GIGHashtag.m */,
 				9978105517DF1DE4008E9359 /* GIGEntities.h */,
 				9978105617DF1DE4008E9359 /* GIGEntities.m */,
+				99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */,
+				99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -349,6 +382,8 @@
 				997607FA17DF43A2002D9951 /* Places */,
 				9978103F17DF137B008E9359 /* Entities */,
 				9976080D17DF50F7002D9951 /* GIGContributorTests.m */,
+				9976082B17DF62C8002D9951 /* GIGUserTests.m */,
+				9976082A17DF62C8002D9951 /* GIGTweetTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -412,6 +447,7 @@
 				9978104917DF162F008E9359 /* GIGMediaTests.m */,
 				9978105217DF1B69008E9359 /* GIGHashtagTests.m */,
 				9978105B17DF1E29008E9359 /* GIGEntitiesTests.m */,
+				99DDE2FF17E05A9E002682B1 /* GIGUserEntitiesTests.m */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -599,6 +635,9 @@
 				9976080017DF4A9E002D9951 /* GIGPlace.h in Headers */,
 				9976080917DF5082002D9951 /* GIGContributor.h in Headers */,
 				9976081817DF581C002D9951 /* GIGColor.h in Headers */,
+				9976082017DF625F002D9951 /* GIGUser.h in Headers */,
+				9976082617DF626C002D9951 /* GIGTweet.h in Headers */,
+				99DDE2F917E05A3C002682B1 /* GIGUserEntities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +658,9 @@
 				9976080117DF4A9E002D9951 /* GIGPlace.h in Headers */,
 				9976080A17DF5082002D9951 /* GIGContributor.h in Headers */,
 				9976081C17DF5CA1002D9951 /* GIGColor.h in Headers */,
+				9976082117DF625F002D9951 /* GIGUser.h in Headers */,
+				9976082717DF626C002D9951 /* GIGTweet.h in Headers */,
+				99DDE2FA17E05A3C002682B1 /* GIGUserEntities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,6 +881,9 @@
 				9976080317DF4A9E002D9951 /* GIGPlace.m in Sources */,
 				9976080C17DF5082002D9951 /* GIGContributor.m in Sources */,
 				9976081D17DF5CA7002D9951 /* GIGColor.m in Sources */,
+				9976082317DF625F002D9951 /* GIGUser.m in Sources */,
+				9976082917DF626C002D9951 /* GIGTweet.m in Sources */,
+				99DDE2FC17E05A3C002682B1 /* GIGUserEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +902,9 @@
 				997607FD17DF43B7002D9951 /* GIGGeometryTests.m in Sources */,
 				9976080617DF4ACE002D9951 /* GIGPlaceTests.m in Sources */,
 				9976080F17DF50F7002D9951 /* GIGContributorTests.m in Sources */,
+				9976082D17DF62C8002D9951 /* GIGTweetTests.m in Sources */,
+				9976082F17DF62C8002D9951 /* GIGUserTests.m in Sources */,
+				99DDE30117E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +924,9 @@
 				9976080217DF4A9E002D9951 /* GIGPlace.m in Sources */,
 				9976080B17DF5082002D9951 /* GIGContributor.m in Sources */,
 				9976081A17DF581C002D9951 /* GIGColor.m in Sources */,
+				9976082217DF625F002D9951 /* GIGUser.m in Sources */,
+				9976082817DF626C002D9951 /* GIGTweet.m in Sources */,
+				99DDE2FB17E05A3C002682B1 /* GIGUserEntities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +945,9 @@
 				997607FC17DF43B7002D9951 /* GIGGeometryTests.m in Sources */,
 				9976080517DF4ACE002D9951 /* GIGPlaceTests.m in Sources */,
 				9976080E17DF50F7002D9951 /* GIGContributorTests.m in Sources */,
+				9976082C17DF62C8002D9951 /* GIGTweetTests.m in Sources */,
+				9976082E17DF62C8002D9951 /* GIGUserTests.m in Sources */,
+				99DDE30017E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

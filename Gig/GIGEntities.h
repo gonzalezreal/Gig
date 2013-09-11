@@ -35,7 +35,7 @@
 // Represents media elements uploaded with the Tweet.
 @property (copy, nonatomic, readonly) NSArray *media;
 
-// Represents URLs included in the text of a Tweet or within textual fields of a user object.
+// Represents URLs included in the text of a Tweet.
 @property (copy, nonatomic, readonly) NSArray *URLs;
 
 // Represents other Twitter users mentioned in the text of the Tweet.
