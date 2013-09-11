@@ -31,10 +31,8 @@
     @class NSColor;
 #endif
 
-//
 // Users can be anyone or anything. They tweet, follow, create lists, have a
 // home timeline, can be mentioned, and can be looked up in bulk.
-//
 @interface GIGUser : MTLModel <MTLJSONSerializing>
 
 // The unique identifier for this User.

@@ -22,11 +22,9 @@
 
 #import <Mantle/Mantle.h>
 
-//
 // Entities provide metadata and additional contextual information about content posted on Twitter.
 // Entities are never divorced from the content they describe. In API v1.1, entities will be returned
 // wherever Tweets are found in the API. Entities are instrumental in resolving URLs.
-//
 @interface GIGEntities : MTLModel <MTLJSONSerializing>
 
 // Represents hashtags which have been parsed out of the Tweet text.

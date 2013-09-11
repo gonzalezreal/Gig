@@ -1,0 +1,341 @@
+[{
+	"created_at": "Wed Sep 11 09:22:04 +0000 2013",
+	"id": 377723710192361500,
+	"id_str": "377723710192361472",
+	"text": "RT @0xced: Yippee! On 64-bit iOS, `BOOL` is now typedef-ed as `bool`.",
+	"source": "web",
+	"truncated": false,
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 268156615,
+		"id_str": "268156615",
+		"name": "Guille Gonzalez",
+		"screen_name": "gonzalezreal",
+		"location": "Madrid",
+		"description": "Software craftsman, comic book lover and movie buff. Mobile development lead for @popcha_app",
+		"url": "http://t.co/L9KZxWCTAo",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/L9KZxWCTAo",
+					"expanded_url": "http://www.popcha.tv/",
+					"display_url": "popcha.tv",
+					"indices": [
+					0, 22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 182,
+		"friends_count": 116,
+		"listed_count": 13,
+		"created_at": "Fri Mar 18 07:33:08 +0000 2011",
+		"favourites_count": 132,
+		"utc_offset": 7200,
+		"time_zone": "Madrid",
+		"geo_enabled": true,
+		"verified": false,
+		"statuses_count": 1677,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://a0.twimg.com/profile_images/378800000399115216/187e323034996806d476a121bee32a74_normal.jpeg",
+		"profile_image_url_https": "https://si0.twimg.com/profile_images/378800000399115216/187e323034996806d476a121bee32a74_normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/268156615/1369832786",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": null,
+		"notifications": null
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"retweeted_status": {
+		"created_at": "Wed Sep 11 07:40:46 +0000 2013",
+		"id": 377698216588091400,
+		"id_str": "377698216588091392",
+		"text": "Yippee! On 64-bit iOS, `BOOL` is now typedef-ed as `bool`.",
+		"source": "<a href=\"http://sites.google.com/site/yorufukurou/\" rel=\"nofollow\">YoruFukurou</a>",
+		"truncated": false,
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"user": {
+			"id": 14377632,
+			"id_str": "14377632",
+			"name": "Cédric Luthi",
+			"screen_name": "0xced",
+			"location": "Geneva",
+			"description": "Cocoa guru — Serial open source contributor\n\n99.9% technical, 0.1% personal\n\nCrafting apps at @Hortis",
+			"url": "http://t.co/GA0CcBCwy0",
+			"entities": {
+				"url": {
+					"urls": [{
+						"url": "http://t.co/GA0CcBCwy0",
+						"expanded_url": "http://0xced.blogspot.com",
+						"display_url": "0xced.blogspot.com",
+						"indices": [
+						0, 22]
+					}]
+				},
+				"description": {
+					"urls": []
+				}
+			},
+			"protected": false,
+			"followers_count": 2482,
+			"friends_count": 669,
+			"listed_count": 154,
+			"created_at": "Sun Apr 13 20:26:41 +0000 2008",
+			"favourites_count": 2746,
+			"utc_offset": 7200,
+			"time_zone": "Bern",
+			"geo_enabled": true,
+			"verified": false,
+			"statuses_count": 5684,
+			"lang": "en",
+			"contributors_enabled": false,
+			"is_translator": false,
+			"profile_background_color": "EBEBEB",
+			"profile_background_image_url": "http://a0.twimg.com/profile_background_images/4291974/Aqua_Blue.jpg",
+			"profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/4291974/Aqua_Blue.jpg",
+			"profile_background_tile": false,
+			"profile_image_url": "http://a0.twimg.com/profile_images/1318265412/0xced-dark_normal.jpg",
+			"profile_image_url_https": "https://si0.twimg.com/profile_images/1318265412/0xced-dark_normal.jpg",
+			"profile_banner_url": "https://pbs.twimg.com/profile_banners/14377632/1351288859",
+			"profile_link_color": "990000",
+			"profile_sidebar_border_color": "DFDFDF",
+			"profile_sidebar_fill_color": "F3F3F3",
+			"profile_text_color": "333333",
+			"profile_use_background_image": true,
+			"default_profile": false,
+			"default_profile_image": false,
+			"following": null,
+			"follow_request_sent": null,
+			"notifications": null
+		},
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweet_count": 24,
+		"favorite_count": 16,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"urls": [],
+			"user_mentions": []
+		},
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"retweet_count": 24,
+	"favorite_count": 0,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"urls": [],
+		"user_mentions": [{
+			"screen_name": "0xced",
+			"name": "Cédric Luthi",
+			"id": 14377632,
+			"id_str": "14377632",
+			"indices": [
+			3, 9]
+		}]
+	},
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+}, {
+	"created_at": "Wed Sep 11 06:56:24 +0000 2013",
+	"id": 377687052143570940,
+	"id_str": "377687052143570944",
+	"text": "RT @Sakurina: I can’t wait for iOS 7 to be public to read all the hilarious tweets from random normals who update their phones not knowing …",
+	"source": "<a href=\"http://tapbots.com/tweetbot\" rel=\"nofollow\">Tweetbot for iOS</a>",
+	"truncated": false,
+	"in_reply_to_status_id": null,
+	"in_reply_to_status_id_str": null,
+	"in_reply_to_user_id": null,
+	"in_reply_to_user_id_str": null,
+	"in_reply_to_screen_name": null,
+	"user": {
+		"id": 268156615,
+		"id_str": "268156615",
+		"name": "Guille Gonzalez",
+		"screen_name": "gonzalezreal",
+		"location": "Madrid",
+		"description": "Software craftsman, comic book lover and movie buff. Mobile development lead for @popcha_app",
+		"url": "http://t.co/L9KZxWCTAo",
+		"entities": {
+			"url": {
+				"urls": [{
+					"url": "http://t.co/L9KZxWCTAo",
+					"expanded_url": "http://www.popcha.tv/",
+					"display_url": "popcha.tv",
+					"indices": [
+					0, 22]
+				}]
+			},
+			"description": {
+				"urls": []
+			}
+		},
+		"protected": false,
+		"followers_count": 182,
+		"friends_count": 116,
+		"listed_count": 13,
+		"created_at": "Fri Mar 18 07:33:08 +0000 2011",
+		"favourites_count": 132,
+		"utc_offset": 7200,
+		"time_zone": "Madrid",
+		"geo_enabled": true,
+		"verified": false,
+		"statuses_count": 1677,
+		"lang": "en",
+		"contributors_enabled": false,
+		"is_translator": false,
+		"profile_background_color": "131516",
+		"profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+		"profile_background_tile": true,
+		"profile_image_url": "http://a0.twimg.com/profile_images/378800000399115216/187e323034996806d476a121bee32a74_normal.jpeg",
+		"profile_image_url_https": "https://si0.twimg.com/profile_images/378800000399115216/187e323034996806d476a121bee32a74_normal.jpeg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/268156615/1369832786",
+		"profile_link_color": "009999",
+		"profile_sidebar_border_color": "EEEEEE",
+		"profile_sidebar_fill_color": "EFEFEF",
+		"profile_text_color": "333333",
+		"profile_use_background_image": true,
+		"default_profile": false,
+		"default_profile_image": false,
+		"following": true,
+		"follow_request_sent": null,
+		"notifications": null
+	},
+	"geo": null,
+	"coordinates": null,
+	"place": null,
+	"contributors": null,
+	"retweeted_status": {
+		"created_at": "Mon Sep 09 04:31:28 +0000 2013",
+		"id": 376925799087353860,
+		"id_str": "376925799087353856",
+		"text": "I can’t wait for iOS 7 to be public to read all the hilarious tweets from random normals who update their phones not knowing what’s coming",
+		"source": "<a href=\"http://tapbots.com/tweetbot\" rel=\"nofollow\">Tweetbot for iOS</a>",
+		"truncated": false,
+		"in_reply_to_status_id": null,
+		"in_reply_to_status_id_str": null,
+		"in_reply_to_user_id": null,
+		"in_reply_to_user_id_str": null,
+		"in_reply_to_screen_name": null,
+		"user": {
+			"id": 659803,
+			"id_str": "659803",
+			"name": "Yanik Magnan",
+			"screen_name": "Sakurina",
+			"location": "Trois-Rivières, Québec, Canada",
+			"description": "iOS/Mac developer. Bemani, anime, idol fan. Completely inscrutable.\n・\niOS/Mac開発者・音ゲーやアニメやアイドル好き・日本語が上手じゃありません",
+			"url": "http://t.co/bhzAB4vnP3",
+			"entities": {
+				"url": {
+					"urls": [{
+						"url": "http://t.co/bhzAB4vnP3",
+						"expanded_url": "http://r-ch.net",
+						"display_url": "r-ch.net",
+						"indices": [
+						0, 22]
+					}]
+				},
+				"description": {
+					"urls": []
+				}
+			},
+			"protected": false,
+			"followers_count": 672,
+			"friends_count": 93,
+			"listed_count": 57,
+			"created_at": "Thu Jan 18 12:08:51 +0000 2007",
+			"favourites_count": 3560,
+			"utc_offset": -14400,
+			"time_zone": "Eastern Time (US & Canada)",
+			"geo_enabled": true,
+			"verified": false,
+			"statuses_count": 55814,
+			"lang": "ja",
+			"contributors_enabled": false,
+			"is_translator": false,
+			"profile_background_color": "120902",
+			"profile_background_image_url": "http://a0.twimg.com/profile_background_images/35792/twitter.jpg",
+			"profile_background_image_url_https": "https://si0.twimg.com/profile_background_images/35792/twitter.jpg",
+			"profile_background_tile": true,
+			"profile_image_url": "http://a0.twimg.com/profile_images/2232647759/smile_copy_normal.jpg",
+			"profile_image_url_https": "https://si0.twimg.com/profile_images/2232647759/smile_copy_normal.jpg",
+			"profile_banner_url": "https://pbs.twimg.com/profile_banners/659803/1371792157",
+			"profile_link_color": "72AA00",
+			"profile_sidebar_border_color": "000000",
+			"profile_sidebar_fill_color": "C2D0B0",
+			"profile_text_color": "646671",
+			"profile_use_background_image": false,
+			"default_profile": false,
+			"default_profile_image": false,
+			"following": null,
+			"follow_request_sent": null,
+			"notifications": null
+		},
+		"geo": null,
+		"coordinates": null,
+		"place": null,
+		"contributors": null,
+		"retweet_count": 283,
+		"favorite_count": 79,
+		"entities": {
+			"hashtags": [],
+			"symbols": [],
+			"urls": [],
+			"user_mentions": []
+		},
+		"favorited": false,
+		"retweeted": false,
+		"lang": "en"
+	},
+	"retweet_count": 283,
+	"favorite_count": 0,
+	"entities": {
+		"hashtags": [],
+		"symbols": [],
+		"urls": [],
+		"user_mentions": [{
+			"screen_name": "Sakurina",
+			"name": "Yanik Magnan",
+			"id": 659803,
+			"id_str": "659803",
+			"indices": [
+			3, 12]
+		}]
+	},
+	"favorited": false,
+	"retweeted": false,
+	"lang": "en"
+}]

@@ -22,9 +22,7 @@
 
 #import <Mantle/Mantle.h>
 
-//
 // Represents an URL included in the text of a Tweet or within textual fields of a user object.
-//
 @interface GIGURL : MTLModel <MTLJSONSerializing>
 
 // Wrapped URL.

@@ -24,9 +24,7 @@
 
 @class GIGSizes;
 
-//
 // Represents a media element uploaded with the Tweet.
-//
 @interface GIGMedia : MTLModel <MTLJSONSerializing>
 
 // ID of the media expressed as a 64-bit integer.

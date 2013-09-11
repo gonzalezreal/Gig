@@ -22,9 +22,7 @@
 
 #import <Mantle/Mantle.h>
 
-//
 // Represents a user mention in the text of a Tweet.
-//
 @interface GIGUserMention : MTLModel <MTLJSONSerializing>
 
 // ID of the mentioned user.
