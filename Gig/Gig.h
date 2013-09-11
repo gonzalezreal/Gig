@@ -39,6 +39,8 @@
 #import "GIGUser.h"
 #import "GIGTweet.h"
 
+#import "GIGClient.h"
+
 #import "NSValueTransformer+GIGPredefinedTransformerAdditions.h"
 
 #endif /* _GIG_H */

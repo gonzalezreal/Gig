@@ -8,8 +8,10 @@
 
     #if TARGET_OS_IPHONE
         #import <MobileCoreServices/MobileCoreServices.h>
+        #import <OHHTTPStubs-iOS/OHHTTPStubs.h>
     #else
         #import <CoreServices/CoreServices.h>
+        #import <OHHTTPStubs/OHHTTPStubs.h>
     #endif
 
     #import <SenTestingKit/SenTestingKit.h>
