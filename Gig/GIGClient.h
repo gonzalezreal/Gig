@@ -128,4 +128,15 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
                                    parameters:(NSDictionary *)parameters
                                    completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
 
+// Retweets a tweet. Returns the original tweet with retweet details embedded.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/post/statuses/retweet/%3Aid
+- (OVCRequestOperation *)retweetStatus:(NSNumber *)statusID
+                            parameters:(NSDictionary *)parameters
+                            completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
 @end
