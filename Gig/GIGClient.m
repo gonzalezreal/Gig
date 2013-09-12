@@ -42,29 +42,41 @@ NSString * const GIGLongitudeKey = @"long";
 NSString * const GIGPlaceIDKey = @"place_id";
 NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
 
+@interface NSDictionary (Normalization)
+
+- (NSDictionary *)gig_normalizedDictionary;
+
+@end
+
+@implementation NSDictionary (Normalization)
+
+- (NSDictionary *)gig_normalizedDictionary {
+    NSMutableDictionary *normalizedDictionary = [NSMutableDictionary dictionaryWithCapacity:self.count];
+
+    // Convert all values to strings
+    for (id key in self) {
+        normalizedDictionary[key] = [self[key] description];
+    }
+
+    return normalizedDictionary;
+}
+
+@end
+
 @implementation GIGClient
 
-- (id)initWithAccount:(ACAccount *)account defaultParameters:(NSDictionary *)defaultParameters {
+- (id)initWithAccount:(ACAccount *)account {
     self = [super initWithBaseURL:[NSURL URLWithString:@"https://api.twitter.com/1.1"]];
 
     if (self) {
         self.account = account;
-        _defaultParameters = defaultParameters ? [defaultParameters copy] : @{};
     }
 
     return self;
 }
 
-- (NSDictionary *)requestParametersWithParameters:(NSDictionary *)parameters {
-    NSDictionary *requestParameters = [self.defaultParameters mtl_dictionaryByAddingEntriesFromDictionary:parameters];
-    NSMutableDictionary *transformedParameters = [NSMutableDictionary dictionaryWithCapacity:requestParameters.count];
-
-    // Make sure all parameter values are strings
-    for (id key in requestParameters) {
-        transformedParameters[key] = [requestParameters[key] description];
-    }
-
-    return transformedParameters;
+- (NSMutableURLRequest *)socialRequestWithMethod:(NSString *)method path:(NSString *)path parameters:(NSDictionary *)parameters parts:(NSArray *)parts {
+    return [super socialRequestWithMethod:method path:path parameters:[parameters gig_normalizedDictionary] parts:parts];
 }
 
 @end
@@ -88,9 +100,8 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
 
     NSString *timelineName = timelineNames[@(timeline)];
     NSString *path = [NSString stringWithFormat:@"statuses/%@.json", timelineName];
-    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
-    return [self GET:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+    return [self GET:path parameters:parameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }
@@ -104,9 +115,8 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     NSParameterAssert(completion);
 
     NSString *path = [NSString stringWithFormat:@"statuses/retweets/%@.json", statusID];
-    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
-    return [self GET:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+    return [self GET:path parameters:parameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }
@@ -116,9 +126,8 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     NSParameterAssert(completion);
 
     NSString *path = [NSString stringWithFormat:@"statuses/show/%@.json", statusID];
-    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
-    return [self GET:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+    return [self GET:path parameters:parameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }
@@ -128,9 +137,8 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     NSParameterAssert(completion);
 
     NSString *path = [NSString stringWithFormat:@"statuses/destroy/%@.json", statusID];
-    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
-    return [self POST:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+    return [self POST:path parameters:parameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }
@@ -140,9 +148,8 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     NSParameterAssert(completion);
 
     parameters = [@{@"status" : text} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
-    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
-    return [self POST:@"statuses/update.json" parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+    return [self POST:@"statuses/update.json" parameters:parameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }
@@ -152,9 +159,8 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     NSParameterAssert(completion);
 
     NSString *path = [NSString stringWithFormat:@"statuses/retweet/%@.json", statusID];
-    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
-    return [self POST:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+    return [self POST:path parameters:parameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }
@@ -169,7 +175,7 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     OVCMultipartPart *part = [OVCMultipartPart partWithData:media name:@"media[]" type:@"application/octet-stream" filename:@"media"];
     NSURLRequest *request = [self multipartFormRequestWithMethod:@"POST"
                                                             path:@"statuses/update_with_media.json"
-                                                      parameters:[self requestParametersWithParameters:parameters]
+                                                      parameters:parameters
                                                            parts:@[part]];
     OVCRequestOperation *operation = [self HTTPRequestOperationWithRequest:request resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *op, id responseObject, NSError *error) {
         completion(responseObject, error);
@@ -184,9 +190,8 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     NSParameterAssert(completion);
 
     parameters = [@{@"id" : statusID} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
-    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
-    return [self GET:@"statuses/retweeters/ids.json" parameters:requestParameters resultClass:GIGUserIDCollection.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+    return [self GET:@"statuses/retweeters/ids.json" parameters:parameters resultClass:GIGUserIDCollection.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }

@@ -44,14 +44,10 @@ extern NSString * const GIGDisplayCoordinatesKey;
 // Twitter API client.
 @interface GIGClient : OVCSocialClient
 
-// Default parameters that will be sent with each request.
-@property (copy, nonatomic, readonly) NSDictionary *defaultParameters;
-
-// Initializes a `GIGClient`with the specified account and default parameters.
+// Initializes a `GIGClient`with the specified account.
 //
-// account           - The user account that will be used to sign each request.
-// defaultParameters - The parameters that will be sent with each request.
-- (id)initWithAccount:(ACAccount *)account defaultParameters:(NSDictionary *)defaultParameters;
+// account - The user account that will be used to sign each request.
+- (id)initWithAccount:(ACAccount *)account;
 
 @end
 

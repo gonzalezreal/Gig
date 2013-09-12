@@ -17,7 +17,7 @@
 - (void)setUp {
     [super setUp];
 
-    self.client = [[GIGClient alloc] initWithAccount:nil defaultParameters:nil];
+    self.client = [[GIGClient alloc] initWithAccount:nil];
     self.client.serviceType = SLServiceTypeTwitter;
 }
 
