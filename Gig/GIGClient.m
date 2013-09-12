@@ -91,3 +91,19 @@ NSString * const GIGIncludeRetweetsKey = @"include_rts";
 }
 
 @end
+
+@implementation GIGClient (Tweets)
+
+- (OVCRequestOperation *)fetchRetweetsForStatus:(NSNumber *)statusID parameters:(NSDictionary *)parameters completion:(void (^)(NSArray *tweets, NSError *error))completion {
+    NSParameterAssert(statusID);
+    NSParameterAssert(completion);
+
+    NSString *path = [NSString stringWithFormat:@"statuses/retweets/%@.json", statusID];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self GET:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+@end

@@ -75,3 +75,18 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
                             completion:(void (^)(NSArray *tweets, NSError *error))completion;
 
 @end
+
+@interface GIGClient (Tweets)
+
+// Fetches a collection of the 100 most recent retweets of the specified tweet.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/get/statuses/retweets/%3Aid
+- (OVCRequestOperation *)fetchRetweetsForStatus:(NSNumber *)statusID
+                                     parameters:(NSDictionary *)parameters
+                                     completion:(void (^)(NSArray *tweets, NSError *error))completion;
+
+@end
