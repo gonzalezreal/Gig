@@ -89,4 +89,16 @@
     STAssertNil(hexString, nil);
 }
 
+- (void)testNumericStringValueTransformer {
+    NSValueTransformer *transformer = [NSValueTransformer valueTransformerForName:GIGNumericStringValueTransformerName];
+    STAssertNotNil(transformer, nil);
+    STAssertTrue([transformer.class allowsReverseTransformation], nil);
+
+    STAssertEqualObjects([transformer transformedValue:@"18446744073709551615"], @18446744073709551615ULL, nil);
+    STAssertNil([transformer transformedValue:nil], nil);
+
+    STAssertEqualObjects([transformer reverseTransformedValue:@18446744073709551615ULL], @"18446744073709551615", nil);
+    STAssertNil([transformer reverseTransformedValue:nil], nil);
+}
+
 @end

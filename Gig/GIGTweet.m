@@ -32,13 +32,13 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-            @"statusID" : @"id",
+            @"statusID" : @"id_str",
             @"creationDate" : @"created_at",
-            @"currentUserRetweetID" : @"current_user_retweet.id",
+            @"currentUserRetweetID" : @"current_user_retweet.id_str",
             @"favoriteCount" : @"favorite_count",
             @"filterLevel" : @"filter_level",
             @"inReplyToScreenName" : @"in_reply_to_screen_name",
-            @"inReplyToStatusID" : @"in_reply_to_status_id",
+            @"inReplyToStatusID" : @"in_reply_to_status_id_str",
             @"inReplyToUserID" : @"in_reply_to_user_id",
             @"language" : @"lang",
             @"possiblySensitive" : @"possibly_sensitive",
@@ -50,6 +50,15 @@
     };
 }
 
++ (NSValueTransformer *)statusIDJSONTransformer {
+    // The reason why 'id_str' is used instead of 'id' is because in some situations (i.e.
+    // very large numbers) Twitter munges the integer value.
+    //
+    // Still, using NSNumber for the statusID property makes it easier to traverse timelines
+    // and sort tweets just by comparing their IDs.
+    return [NSValueTransformer valueTransformerForName:GIGNumericStringValueTransformerName];
+}
+
 + (NSValueTransformer *)coordinatesJSONTransformer {
     return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GIGGeometry.class];
 }
@@ -58,8 +67,16 @@
     return [NSValueTransformer valueTransformerForName:GIGDateValueTransformerName];
 }
 
++ (NSValueTransformer *)currentUserRetweetIDJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:GIGNumericStringValueTransformerName];
+}
+
 + (NSValueTransformer *)entitiesJSONTransformer {
     return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:GIGEntities.class];
+}
+
++ (NSValueTransformer *)inReplyToStatusIDJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:GIGNumericStringValueTransformerName];
 }
 
 + (NSValueTransformer *)favoritedJSONTransformer {

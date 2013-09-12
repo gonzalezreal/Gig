@@ -25,6 +25,7 @@
 extern NSString * const GIGRangeValueTransformerName;
 extern NSString * const GIGDateValueTransformerName;
 extern NSString * const GIGColorValueTransformerName;
+extern NSString * const GIGNumericStringValueTransformerName;
 
 @interface NSValueTransformer (GIGPredefinedTransformerAdditions)
 
