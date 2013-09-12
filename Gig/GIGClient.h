@@ -22,6 +22,8 @@
 
 #import <Overcoat/Overcoat.h>
 
+@class GIGTweet;
+
 extern NSString * const GIGCountKey;
 extern NSString * const GIGSinceIDKey;
 extern NSString * const GIGMaxIDKey;
@@ -87,5 +89,16 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
 - (OVCRequestOperation *)fetchRetweetsForStatus:(NSNumber *)statusID
                                      parameters:(NSDictionary *)parameters
                                      completion:(void (^)(NSArray *tweets, NSError *error))completion;
+
+// Fetches a single tweet.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/get/statuses/show/%3Aid
+- (OVCRequestOperation *)fetchStatus:(NSNumber *)statusID
+                          parameters:(NSDictionary *)parameters
+                          completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
 
 @end

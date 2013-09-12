@@ -95,6 +95,32 @@
     [OHHTTPStubs removeRequestHandler:requestHandler];
 }
 
+- (void)testFetchStatus {
+    NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/show/210462857140252672.json"];
+    id requestHandler = [self addRequestHandlerForURL:url responseFilename:@"210462857140252672.json"];
+
+    GIGTweet * __block blockTweet = nil;
+    NSError * __block blockError = nil;
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+
+    OVCRequestOperation *operation = [self.client fetchStatus:@210462857140252672 parameters:nil completion:^(GIGTweet *tweet, NSError *error) {
+        blockTweet = tweet;
+        blockError = error;
+        dispatch_semaphore_signal(semaphore);
+    }];
+
+    BOOL timeout = [self waitForSemaphore:semaphore timeout:5];
+    STAssertFalse(timeout, @"Timeout waiting for processing queue");
+
+    STAssertNotNil(operation, nil);
+    STAssertNil(blockError, nil);
+
+    STAssertTrue([blockTweet isKindOfClass:GIGTweet.class], nil);
+    STAssertEqualObjects(blockTweet.statusID, @210462857140252672, nil);
+
+    [OHHTTPStubs removeRequestHandler:requestHandler];
+}
+
 - (id)addRequestHandlerForURL:(NSURL *)url responseFilename:(NSString *)filename {
     return [OHHTTPStubs addRequestHandler:^OHHTTPStubsResponse *(NSURLRequest *request, BOOL onlyCheck) {
         if (![request.URL isEqual:url]) return nil;
