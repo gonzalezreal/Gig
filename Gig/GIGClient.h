@@ -23,6 +23,7 @@
 #import <Overcoat/Overcoat.h>
 
 @class GIGTweet;
+@class GIGUserIDCollection;
 
 extern NSString * const GIGCountKey;
 extern NSString * const GIGSinceIDKey;
@@ -152,5 +153,16 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
                                         media:(NSData *)media
                                    parameters:(NSDictionary *)parameters
                                    completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
+// Returns a collection of up to 100 user IDs belonging to users who have retweeted the specified tweet.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// https://dev.twitter.com/docs/api/1.1/get/statuses/retweeters/ids
+- (OVCRequestOperation *)fetchRetweetersForStatus:(NSNumber *)statusID
+                                       parameters:(NSDictionary *)parameters
+                                       completion:(void (^)(GIGUserIDCollection *collection, NSError *error))completion;
 
 @end

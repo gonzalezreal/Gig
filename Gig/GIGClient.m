@@ -22,6 +22,7 @@
 
 #import "GIGClient.h"
 #import "GIGTweet.h"
+#import "GIGUserIDCollection.h"
 
 #import <Accounts/Accounts.h>
 
@@ -176,6 +177,18 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     [self enqueueHTTPRequestOperation:operation];
 
     return operation;
+}
+
+- (OVCRequestOperation *)fetchRetweetersForStatus:(NSNumber *)statusID parameters:(NSDictionary *)parameters completion:(void (^)(GIGUserIDCollection *collection, NSError *error))completion {
+    NSParameterAssert(statusID);
+    NSParameterAssert(completion);
+
+    parameters = [@{@"id" : statusID} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self GET:@"statuses/retweeters/ids.json" parameters:requestParameters resultClass:GIGUserIDCollection.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
 }
 
 @end
