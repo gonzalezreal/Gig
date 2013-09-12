@@ -22,17 +22,24 @@
 
 #import <Overcoat/Overcoat.h>
 
+@class GIGTweet;
+@class GIGUserIDCollection;
+
 extern NSString * const GIGCountKey;
 extern NSString * const GIGSinceIDKey;
 extern NSString * const GIGMaxIDKey;
 extern NSString * const GIGTrimUserKey;
-extern NSString * const GIGContributorDetailsKey;
 extern NSString * const GIGIncludeEntitiesKey;
 extern NSString * const GIGIncludeUserEntitiesKey;
 extern NSString * const GIGUserIDKey;
 extern NSString * const GIGScreenNameKey;
 extern NSString * const GIGExcludeRepliesKey;
 extern NSString * const GIGIncludeRetweetsKey;
+extern NSString * const GIGInReplyToStatusIDKey;
+extern NSString * const GIGLatitudeKey;
+extern NSString * const GIGLongitudeKey;
+extern NSString * const GIGPlaceIDKey;
+extern NSString * const GIGDisplayCoordinatesKey;
 
 // Twitter API client.
 @interface GIGClient : OVCSocialClient
@@ -73,5 +80,89 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
 - (OVCRequestOperation *)fetchTimeline:(GIGTimeline)timeline
                             parameters:(NSDictionary *)parameters
                             completion:(void (^)(NSArray *tweets, NSError *error))completion;
+
+@end
+
+@interface GIGClient (Tweets)
+
+// Fetches a collection of the 100 most recent retweets of the specified tweet.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/get/statuses/retweets/%3Aid
+- (OVCRequestOperation *)fetchRetweetsForStatus:(NSNumber *)statusID
+                                     parameters:(NSDictionary *)parameters
+                                     completion:(void (^)(NSArray *tweets, NSError *error))completion;
+
+// Fetches a single tweet.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/get/statuses/show/%3Aid
+- (OVCRequestOperation *)fetchStatus:(NSNumber *)statusID
+                          parameters:(NSDictionary *)parameters
+                          completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
+// Deletes the specified tweet. The authenticating user must be the author of the specified status.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/get/statuses/show/%3Aid
+- (OVCRequestOperation *)removeStatus:(NSNumber *)statusID
+                            parameters:(NSDictionary *)parameters
+                            completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
+// Updates the authenticating user's current status, also known as tweeting.
+//
+// text       - The text of your status update, typically up to 140 characters.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/post/statuses/update
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text
+                                   parameters:(NSDictionary *)parameters
+                                   completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
+// Retweets a tweet. Returns the original tweet with retweet details embedded.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/post/statuses/retweet/%3Aid
+- (OVCRequestOperation *)retweetStatus:(NSNumber *)statusID
+                            parameters:(NSDictionary *)parameters
+                            completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
+// Updates the authenticating user's current status and attaches media for upload. In other words,
+// it creates a Tweet with a picture attached.
+//
+// text       - The text of your status update, typically up to 140 characters.
+// media      -
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/post/statuses/update
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text
+                                        media:(NSData *)media
+                                   parameters:(NSDictionary *)parameters
+                                   completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
+// Returns a collection of up to 100 user IDs belonging to users who have retweeted the specified tweet.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// https://dev.twitter.com/docs/api/1.1/get/statuses/retweeters/ids
+- (OVCRequestOperation *)fetchRetweetersForStatus:(NSNumber *)statusID
+                                       parameters:(NSDictionary *)parameters
+                                       completion:(void (^)(GIGUserIDCollection *collection, NSError *error))completion;
 
 @end

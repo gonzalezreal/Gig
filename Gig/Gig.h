@@ -35,7 +35,7 @@
 #import "GIGGeometry.h"
 #import "GIGPlace.h"
 
-#import "GIGContributor.h"
+#import "GIGUserIDCollection.h"
 #import "GIGUser.h"
 #import "GIGTweet.h"
 

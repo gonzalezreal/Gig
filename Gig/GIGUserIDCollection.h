@@ -1,4 +1,4 @@
-// GIGContributor.h
+// GIGUserIDCollection.h
 // 
 // Copyright (c) 2013 Guillermo Gonzalez
 //
@@ -22,14 +22,18 @@
 
 #import <Mantle/Mantle.h>
 
-// Brief information about a user who contributed to the authorship
-// of a Tweet, on behalf of the official author.
-@interface GIGContributor : MTLModel <MTLJSONSerializing>
+// A cursored collection of user IDs
+//
+// See https://dev.twitter.com/docs/misc/cursoring
+@interface GIGUserIDCollection : MTLModel <MTLJSONSerializing>
 
-// ID of the user who contributed to the Tweet.
-@property (copy, nonatomic, readonly) NSNumber *userID;
+// The cursor that you should send to the endpoint to receive the previous batch of IDs.
+@property (copy, nonatomic, readonly) NSNumber *previousCursor;
 
-// The screen name of the user who contributed to the Tweet.
-@property (copy, nonatomic, readonly) NSString *screenName;
+// The cursor that you should send to the endpoint to receive the next batch of IDs.
+@property (copy, nonatomic, readonly) NSNumber *nextCursor;
+
+// Array of user IDs.
+@property (copy, nonatomic, readonly) NSArray *IDs;
 
 @end

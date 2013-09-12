@@ -19,7 +19,6 @@
 
     NSDictionary *representation = @{
             @"id" : @6253282,
-            @"contributors_enabled" : @NO,
             @"created_at" : @"Mon Nov 29 21:18:15 +0000 2010",
             @"default_profile" : @NO,
             @"default_profile_image" : @NO,
@@ -83,12 +82,12 @@
                     },
                     @"text" : @"@MicahMcVicker make sure you're using include_rts=true and no other filters, then walking your timeline by since_id and max_id",
                     @"retweet_count" : @0,
-                    @"id" : @192290904646754304,
+                    @"id_str" : @"192290904646754304",
                     @"retweeted" : @NO,
                     @"in_reply_to_user_id" : @166661446,
                     @"in_reply_to_screen_name" : @"MicahMcVicker",
                     @"source": @"<a href=\"http://sites.google.com/site/yorufukurou/\" rel=\"nofollow\">YoruFukurou</a>",
-                    @"in_reply_to_status_id": @192290470427246594
+                    @"in_reply_to_status_id_str": @"192290470427246594"
             },
             @"statuses_count" : @42,
             @"time_zone" : @"Pacific Time (US & Canada)",
@@ -113,8 +112,6 @@
 
 - (void)testThatUserInitializes {
     STAssertEqualObjects(self.user.userID, @6253282, nil);
-
-    STAssertEqualObjects(self.user.contributorsEnabled, @NO, nil);
 
     NSValueTransformer *dateTransformer = [NSValueTransformer valueTransformerForName:GIGDateValueTransformerName];
     NSDate *creationDate = [dateTransformer transformedValue:@"Mon Nov 29 21:18:15 +0000 2010"];

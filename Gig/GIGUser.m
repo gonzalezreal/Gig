@@ -31,7 +31,6 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
             @"userID" : @"id",
-            @"contributorsEnabled" : @"contributors_enabled",
             @"creationDate" : @"created_at",
             @"defaultProfile" : @"default_profile",
             @"defaultProfileImage" : @"default_profile_image",
@@ -64,10 +63,6 @@
             @"withheldInCountries" : @"withheld_in_countries",
             @"withheldScope" : @"withheld_scope"
     };
-}
-
-+ (NSValueTransformer *)contributorsEnabledJSONTransformer {
-    return [NSValueTransformer valueTransformerForName:MTLBooleanValueTransformerName];
 }
 
 + (NSValueTransformer *)creationDateJSONTransformer {

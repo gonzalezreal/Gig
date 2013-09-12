@@ -41,10 +41,6 @@
 // Unique identifier for this Tweet.
 @property (copy, nonatomic, readonly) NSNumber *statusID;
 
-// An collection of brief user objects (usually only one) indicating users who contributed
-// to the authorship of the tweet, on behalf of the official tweet author.
-@property (copy, nonatomic, readonly) NSArray *contributors;
-
 // Represents the geographic location of this Tweet as reported by the user or client application.
 @property (strong, nonatomic, readonly) GIGGeometry *coordinates;
 
