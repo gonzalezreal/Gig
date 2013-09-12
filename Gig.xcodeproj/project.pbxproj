@@ -122,6 +122,12 @@
 		99D5505017E1E63500D147B4 /* statuses_retweet.json in Resources */ = {isa = PBXBuildFile; fileRef = 99D5504E17E1E63500D147B4 /* statuses_retweet.json */; };
 		99D5506317E1F3E400D147B4 /* statuses_update_with_media.json in Resources */ = {isa = PBXBuildFile; fileRef = 99D5506217E1F3E400D147B4 /* statuses_update_with_media.json */; };
 		99D5506417E1F3E400D147B4 /* statuses_update_with_media.json in Resources */ = {isa = PBXBuildFile; fileRef = 99D5506217E1F3E400D147B4 /* statuses_update_with_media.json */; };
+		99D5506917E1F96300D147B4 /* GIGUserIDCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D5506717E1F96300D147B4 /* GIGUserIDCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99D5506A17E1F96300D147B4 /* GIGUserIDCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D5506717E1F96300D147B4 /* GIGUserIDCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99D5506B17E1F96300D147B4 /* GIGUserIDCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D5506817E1F96300D147B4 /* GIGUserIDCollection.m */; };
+		99D5506C17E1F96300D147B4 /* GIGUserIDCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D5506817E1F96300D147B4 /* GIGUserIDCollection.m */; };
+		99D5507017E1FDEC00D147B4 /* GIGUserIDCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D5506D17E1F9D200D147B4 /* GIGUserIDCollectionTests.m */; };
+		99D5507117E1FDED00D147B4 /* GIGUserIDCollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D5506D17E1F9D200D147B4 /* GIGUserIDCollectionTests.m */; };
 		99DDE2F917E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99DDE2FA17E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99DDE2FB17E05A3C002682B1 /* GIGUserEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */; };
@@ -287,6 +293,9 @@
 		99D5504B17E1D09800D147B4 /* statuses_update.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = statuses_update.json; sourceTree = "<group>"; };
 		99D5504E17E1E63500D147B4 /* statuses_retweet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = statuses_retweet.json; sourceTree = "<group>"; };
 		99D5506217E1F3E400D147B4 /* statuses_update_with_media.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = statuses_update_with_media.json; sourceTree = "<group>"; };
+		99D5506717E1F96300D147B4 /* GIGUserIDCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUserIDCollection.h; sourceTree = "<group>"; };
+		99D5506817E1F96300D147B4 /* GIGUserIDCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserIDCollection.m; sourceTree = "<group>"; };
+		99D5506D17E1F9D200D147B4 /* GIGUserIDCollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserIDCollectionTests.m; sourceTree = "<group>"; };
 		99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUserEntities.h; sourceTree = "<group>"; };
 		99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntities.m; sourceTree = "<group>"; };
 		99DDE2FF17E05A9E002682B1 /* GIGUserEntitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntitiesTests.m; sourceTree = "<group>"; };
@@ -371,6 +380,8 @@
 				9976081F17DF625F002D9951 /* GIGUser.m */,
 				9976082417DF626C002D9951 /* GIGTweet.h */,
 				9976082517DF626C002D9951 /* GIGTweet.m */,
+				99D5506717E1F96300D147B4 /* GIGUserIDCollection.h */,
+				99D5506817E1F96300D147B4 /* GIGUserIDCollection.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -405,6 +416,7 @@
 				9978103F17DF137B008E9359 /* Entities */,
 				9976082B17DF62C8002D9951 /* GIGUserTests.m */,
 				9976082A17DF62C8002D9951 /* GIGTweetTests.m */,
+				99D5506D17E1F9D200D147B4 /* GIGUserIDCollectionTests.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -678,6 +690,7 @@
 				9976082617DF626C002D9951 /* GIGTweet.h in Headers */,
 				99DDE2F917E05A3C002682B1 /* GIGUserEntities.h in Headers */,
 				99A06D1A17E0724A0042B1AB /* GIGClient.h in Headers */,
+				99D5506917E1F96300D147B4 /* GIGUserIDCollection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +714,7 @@
 				9976082717DF626C002D9951 /* GIGTweet.h in Headers */,
 				99DDE2FA17E05A3C002682B1 /* GIGUserEntities.h in Headers */,
 				99A06D1B17E0724A0042B1AB /* GIGClient.h in Headers */,
+				99D5506A17E1F96300D147B4 /* GIGUserIDCollection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,6 +952,7 @@
 				9976082917DF626C002D9951 /* GIGTweet.m in Sources */,
 				99DDE2FC17E05A3C002682B1 /* GIGUserEntities.m in Sources */,
 				99A06D1D17E0724A0042B1AB /* GIGClient.m in Sources */,
+				99D5506C17E1F96300D147B4 /* GIGUserIDCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,6 +974,7 @@
 				9976082F17DF62C8002D9951 /* GIGUserTests.m in Sources */,
 				99DDE30117E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,
 				99A06D2017E072A80042B1AB /* GIGClientTests.m in Sources */,
+				99D5507117E1FDED00D147B4 /* GIGUserIDCollectionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,6 +997,7 @@
 				9976082817DF626C002D9951 /* GIGTweet.m in Sources */,
 				99DDE2FB17E05A3C002682B1 /* GIGUserEntities.m in Sources */,
 				99A06D1C17E0724A0042B1AB /* GIGClient.m in Sources */,
+				99D5506B17E1F96300D147B4 /* GIGUserIDCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1002,6 +1019,7 @@
 				9976082E17DF62C8002D9951 /* GIGUserTests.m in Sources */,
 				99DDE30017E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,
 				99A06D1F17E072A80042B1AB /* GIGClientTests.m in Sources */,
+				99D5507017E1FDEC00D147B4 /* GIGUserIDCollectionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
