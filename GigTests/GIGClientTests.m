@@ -41,7 +41,7 @@
 
 - (void)testFetchTimeline {
     NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json?count=2"];
-    id requestHandler = [self addRequestHandlerForURL:url responseFilename:@"home_timeline.json"];
+    id requestHandler = [self addRequestHandlerForHTTPMethod:@"GET" url:url responseFilename:@"home_timeline.json"];
 
     NSArray * __block blockTweets = nil;
     NSError * __block blockError = nil;
@@ -69,7 +69,7 @@
 
 - (void)testFetchRetweets {
     NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/retweets/21947795900469248.json?count=2"];
-    id requestHandler = [self addRequestHandlerForURL:url responseFilename:@"retweets.json"];
+    id requestHandler = [self addRequestHandlerForHTTPMethod:@"GET" url:url responseFilename:@"retweets.json"];
 
     NSArray * __block blockTweets = nil;
     NSError * __block blockError = nil;
@@ -97,7 +97,7 @@
 
 - (void)testFetchStatus {
     NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/show/210462857140252672.json"];
-    id requestHandler = [self addRequestHandlerForURL:url responseFilename:@"210462857140252672.json"];
+    id requestHandler = [self addRequestHandlerForHTTPMethod:@"GET" url:url responseFilename:@"210462857140252672.json"];
 
     GIGTweet * __block blockTweet = nil;
     NSError * __block blockError = nil;
@@ -121,9 +121,37 @@
     [OHHTTPStubs removeRequestHandler:requestHandler];
 }
 
-- (id)addRequestHandlerForURL:(NSURL *)url responseFilename:(NSString *)filename {
+- (void)testRemoveStatus {
+    NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/destroy/240854986559455234.json"];
+    id requestHandler = [self addRequestHandlerForHTTPMethod:@"POST" url:url responseFilename:@"240854986559455234.json"];
+
+    GIGTweet * __block blockTweet = nil;
+    NSError * __block blockError = nil;
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+
+    OVCRequestOperation *operation = [self.client removeStatus:@240854986559455234 parameters:nil completion:^(GIGTweet *tweet, NSError *error) {
+        blockTweet = tweet;
+        blockError = error;
+        dispatch_semaphore_signal(semaphore);
+    }];
+
+    BOOL timeout = [self waitForSemaphore:semaphore timeout:5];
+    STAssertFalse(timeout, @"Timeout waiting for processing queue");
+
+    STAssertNotNil(operation, nil);
+    STAssertNil(blockError, nil);
+
+    STAssertTrue([blockTweet isKindOfClass:GIGTweet.class], nil);
+    STAssertEqualObjects(blockTweet.statusID, @240854986559455234, nil);
+
+    [OHHTTPStubs removeRequestHandler:requestHandler];
+}
+
+- (id)addRequestHandlerForHTTPMethod:(NSString *)HTTPmethod url:(NSURL *)url responseFilename:(NSString *)filename {
     return [OHHTTPStubs addRequestHandler:^OHHTTPStubsResponse *(NSURLRequest *request, BOOL onlyCheck) {
-        if (![request.URL isEqual:url]) return nil;
+        if (![request.HTTPMethod isEqualToString:HTTPmethod] || ![request.URL isEqual:url]) {
+            return nil;
+        }
 
         NSURL *fileURL = [[NSBundle bundleForClass:self.class] URLForResource:filename.stringByDeletingPathExtension withExtension:filename.pathExtension];
         return [OHHTTPStubsResponse responseWithFileURL:fileURL contentType:@"application/json" responseTime:0];

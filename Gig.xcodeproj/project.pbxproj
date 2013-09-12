@@ -114,6 +114,8 @@
 		99A06D1D17E0724A0042B1AB /* GIGClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A06D1917E0724A0042B1AB /* GIGClient.m */; };
 		99A06D1F17E072A80042B1AB /* GIGClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A06D1E17E072A80042B1AB /* GIGClientTests.m */; };
 		99A06D2017E072A80042B1AB /* GIGClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A06D1E17E072A80042B1AB /* GIGClientTests.m */; };
+		99D5504717E1C77000D147B4 /* 240854986559455234.json in Resources */ = {isa = PBXBuildFile; fileRef = 99D5504617E1C77000D147B4 /* 240854986559455234.json */; };
+		99D5504817E1C77000D147B4 /* 240854986559455234.json in Resources */ = {isa = PBXBuildFile; fileRef = 99D5504617E1C77000D147B4 /* 240854986559455234.json */; };
 		99DDE2F917E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99DDE2FA17E05A3C002682B1 /* GIGUserEntities.h in Headers */ = {isa = PBXBuildFile; fileRef = 99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		99DDE2FB17E05A3C002682B1 /* GIGUserEntities.m in Sources */ = {isa = PBXBuildFile; fileRef = 99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */; };
@@ -275,6 +277,7 @@
 		99A06D1817E0724A0042B1AB /* GIGClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGClient.h; sourceTree = "<group>"; };
 		99A06D1917E0724A0042B1AB /* GIGClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGClient.m; sourceTree = "<group>"; };
 		99A06D1E17E072A80042B1AB /* GIGClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGClientTests.m; sourceTree = "<group>"; };
+		99D5504617E1C77000D147B4 /* 240854986559455234.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 240854986559455234.json; sourceTree = "<group>"; };
 		99DDE2F717E05A3C002682B1 /* GIGUserEntities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUserEntities.h; sourceTree = "<group>"; };
 		99DDE2F817E05A3C002682B1 /* GIGUserEntities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntities.m; sourceTree = "<group>"; };
 		99DDE2FF17E05A9E002682B1 /* GIGUserEntitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGUserEntitiesTests.m; sourceTree = "<group>"; };
@@ -635,6 +638,7 @@
 				99FEFF3C17E0A66500AE0AA7 /* home_timeline.json */,
 				99E68C8317E1A60700FAA382 /* retweets.json */,
 				99E68C8617E1A9F200FAA382 /* 210462857140252672.json */,
+				99D5504617E1C77000D147B4 /* 240854986559455234.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -849,6 +853,7 @@
 				99FEFF3E17E0A66500AE0AA7 /* home_timeline.json in Resources */,
 				99E68C8517E1A60700FAA382 /* retweets.json in Resources */,
 				99E68C8817E1A9F200FAA382 /* 210462857140252672.json in Resources */,
+				99D5504817E1C77000D147B4 /* 240854986559455234.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,6 +865,7 @@
 				99FEFF3D17E0A66500AE0AA7 /* home_timeline.json in Resources */,
 				99E68C8417E1A60700FAA382 /* retweets.json in Resources */,
 				99E68C8717E1A9F200FAA382 /* 210462857140252672.json in Resources */,
+				99D5504717E1C77000D147B4 /* 240854986559455234.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

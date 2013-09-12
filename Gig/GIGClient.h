@@ -101,4 +101,15 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
                           parameters:(NSDictionary *)parameters
                           completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
 
+// Deletes the specified tweet. The authenticating user must be the author of the specified status.
+//
+// statusID   - The ID of the desired tweet.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/get/statuses/show/%3Aid
+- (OVCRequestOperation *)removeStatus:(NSNumber *)statusID
+                            parameters:(NSDictionary *)parameters
+                            completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
 @end
