@@ -138,9 +138,7 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     NSParameterAssert(text);
     NSParameterAssert(completion);
 
-    parameters = [parameters mtl_dictionaryByAddingEntriesFromDictionary:@{
-            @"status" : text
-    }];
+    parameters = [@{@"status" : text} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
     NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
     return [self POST:@"statuses/update.json" parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
@@ -158,6 +156,26 @@ NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
     return [self POST:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
+}
+
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text media:(NSData *)media parameters:(NSDictionary *)parameters completion:(void (^)(GIGTweet *tweet, NSError *error))completion {
+    NSParameterAssert(text);
+    NSParameterAssert(media);
+    NSParameterAssert(completion);
+
+    parameters = [@{@"status" : text} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
+
+    OVCMultipartPart *part = [OVCMultipartPart partWithData:media name:@"media[]" type:@"application/octet-stream" filename:@"media"];
+    NSURLRequest *request = [self multipartFormRequestWithMethod:@"POST"
+                                                            path:@"statuses/update_with_media.json"
+                                                      parameters:[self requestParametersWithParameters:parameters]
+                                                           parts:@[part]];
+    OVCRequestOperation *operation = [self HTTPRequestOperationWithRequest:request resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *op, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+    [self enqueueHTTPRequestOperation:operation];
+
+    return operation;
 }
 
 @end

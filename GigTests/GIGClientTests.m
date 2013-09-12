@@ -205,12 +205,40 @@
     [OHHTTPStubs removeRequestHandler:requestHandler];
 }
 
+- (void)testUpdateStatusWithMedia {
+    NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/update_with_media.json"];
+    id requestHandler = [self addRequestHandlerForHTTPMethod:@"POST" url:url responseFilename:@"statuses_update_with_media.json"];
+
+    GIGTweet * __block blockTweet = nil;
+    NSError * __block blockError = nil;
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+
+    NSData *data = [@"Some data" dataUsingEncoding:NSUTF8StringEncoding];
+
+    OVCRequestOperation *operation = [self.client updateStatusWithText:@"Hello!" media:data parameters:nil completion:^(GIGTweet *tweet, NSError *error) {
+        blockTweet = tweet;
+        blockError = error;
+        dispatch_semaphore_signal(semaphore);
+    }];
+
+    BOOL timeout = [self waitForSemaphore:semaphore timeout:5];
+    STAssertFalse(timeout, @"Timeout waiting for processing queue");
+
+    STAssertNotNil(operation, nil);
+    STAssertNil(blockError, nil);
+
+    STAssertTrue([blockTweet isKindOfClass:GIGTweet.class], nil);
+    STAssertEqualObjects(blockTweet.statusID, @244204973972410368, nil);
+
+    [OHHTTPStubs removeRequestHandler:requestHandler];
+}
+
 - (id)addRequestHandlerForHTTPMethod:(NSString *)HTTPmethod url:(NSURL *)url responseFilename:(NSString *)filename {
     return [OHHTTPStubs addRequestHandler:^OHHTTPStubsResponse *(NSURLRequest *request, BOOL onlyCheck) {
         if (![request.HTTPMethod isEqualToString:HTTPmethod] || ![request.URL isEqual:url]) {
             return nil;
         }
-
+        
         NSURL *fileURL = [[NSBundle bundleForClass:self.class] URLForResource:filename.stringByDeletingPathExtension withExtension:filename.pathExtension];
         return [OHHTTPStubsResponse responseWithFileURL:fileURL contentType:@"application/json" responseTime:0];
     }];

@@ -139,4 +139,18 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
                             parameters:(NSDictionary *)parameters
                             completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
 
+// Updates the authenticating user's current status and attaches media for upload. In other words,
+// it creates a Tweet with a picture attached.
+//
+// text       - The text of your status update, typically up to 140 characters.
+// media      -
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/post/statuses/update
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text
+                                        media:(NSData *)media
+                                   parameters:(NSDictionary *)parameters
+                                   completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
 @end
