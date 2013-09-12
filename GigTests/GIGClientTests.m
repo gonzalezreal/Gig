@@ -27,28 +27,28 @@
 }
 
 - (void)testConstants {
-    STAssertEqualObjects(GIGMentionsTimeline, @"mentions_timeline", nil);
-    STAssertEqualObjects(GIGUserTimeline, @"user_timeline", nil);
-    STAssertEqualObjects(GIGHomeTimeline, @"home_timeline", nil);
-    STAssertEqualObjects(GIGRetweetsOfMe, @"retweets_of_me", nil);
-
     STAssertEqualObjects(GIGCountKey, @"count", nil);
     STAssertEqualObjects(GIGSinceIDKey, @"since_id", nil);
     STAssertEqualObjects(GIGMaxIDKey, @"max_id", nil);
     STAssertEqualObjects(GIGTrimUserKey, @"trim_user", nil);
     STAssertEqualObjects(GIGContributorDetailsKey, @"contributor_details", nil);
     STAssertEqualObjects(GIGIncludeEntitiesKey, @"include_entities", nil);
+    STAssertEqualObjects(GIGIncludeUserEntitiesKey, @"include_user_entities", nil);
+    STAssertEqualObjects(GIGUserIDKey, @"user_id", nil);
+    STAssertEqualObjects(GIGScreenNameKey, @"screen_name", nil);
+    STAssertEqualObjects(GIGExcludeRepliesKey, @"exclude_replies", nil);
+    STAssertEqualObjects(GIGIncludeRetweetsKey, @"include_rts", nil);
 }
 
 - (void)testFetchTimeline {
-    id requestHandler = [self addRequestHandlerForURL:[NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json?count=2"]
-                                     responseFilename:@"home_timeline.json"];
+    NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/1.1/statuses/home_timeline.json?count=2"];
+    id requestHandler = [self addRequestHandlerForURL:url responseFilename:@"home_timeline.json"];
 
     NSArray * __block blockTweets = nil;
     NSError * __block blockError = nil;
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
 
-    OVCRequestOperation *operation = [self.client fetchTimeline:GIGHomeTimeline parameters:@{
+    OVCRequestOperation *operation = [self.client fetchTimeline:GIGTimelineHome parameters:@{
             GIGCountKey : @2
     } completion:^(NSArray *tweets, NSError *error) {
         blockTweets = tweets;
