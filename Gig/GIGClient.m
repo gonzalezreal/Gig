@@ -22,6 +22,7 @@
 
 #import "GIGClient.h"
 #import "GIGTweet.h"
+#import "GIGUserIDCollection.h"
 
 #import <Accounts/Accounts.h>
 
@@ -29,13 +30,17 @@ NSString * const GIGCountKey = @"count";
 NSString * const GIGSinceIDKey = @"since_id";
 NSString * const GIGMaxIDKey = @"max_id";
 NSString * const GIGTrimUserKey = @"trim_user";
-NSString * const GIGContributorDetailsKey = @"contributor_details";
 NSString * const GIGIncludeEntitiesKey = @"include_entities";
 NSString * const GIGIncludeUserEntitiesKey = @"include_user_entities";
 NSString * const GIGUserIDKey = @"user_id";
 NSString * const GIGScreenNameKey = @"screen_name";
 NSString * const GIGExcludeRepliesKey = @"exclude_replies";
 NSString * const GIGIncludeRetweetsKey = @"include_rts";
+NSString * const GIGInReplyToStatusIDKey = @"in_reply_to_status_id";
+NSString * const GIGLatitudeKey = @"lat";
+NSString * const GIGLongitudeKey = @"long";
+NSString * const GIGPlaceIDKey = @"place_id";
+NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
 
 @implementation GIGClient
 
@@ -86,6 +91,102 @@ NSString * const GIGIncludeRetweetsKey = @"include_rts";
     NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
     return [self GET:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+@end
+
+@implementation GIGClient (Tweets)
+
+- (OVCRequestOperation *)fetchRetweetsForStatus:(NSNumber *)statusID parameters:(NSDictionary *)parameters completion:(void (^)(NSArray *tweets, NSError *error))completion {
+    NSParameterAssert(statusID);
+    NSParameterAssert(completion);
+
+    NSString *path = [NSString stringWithFormat:@"statuses/retweets/%@.json", statusID];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self GET:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+- (OVCRequestOperation *)fetchStatus:(NSNumber *)statusID parameters:(NSDictionary *)parameters completion:(void (^)(GIGTweet *tweet, NSError *error))completion {
+    NSParameterAssert(statusID);
+    NSParameterAssert(completion);
+
+    NSString *path = [NSString stringWithFormat:@"statuses/show/%@.json", statusID];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self GET:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+- (OVCRequestOperation *)removeStatus:(NSNumber *)statusID parameters:(NSDictionary *)parameters completion:(void (^)(GIGTweet *tweet, NSError *error))completion {
+    NSParameterAssert(statusID);
+    NSParameterAssert(completion);
+
+    NSString *path = [NSString stringWithFormat:@"statuses/destroy/%@.json", statusID];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self POST:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text parameters:(NSDictionary *)parameters completion:(void (^)(GIGTweet *tweet, NSError *error))completion {
+    NSParameterAssert(text);
+    NSParameterAssert(completion);
+
+    parameters = [@{@"status" : text} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self POST:@"statuses/update.json" parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+- (OVCRequestOperation *)retweetStatus:(NSNumber *)statusID parameters:(NSDictionary *)parameters completion:(void (^)(GIGTweet *tweet, NSError *error))completion {
+    NSParameterAssert(statusID);
+    NSParameterAssert(completion);
+
+    NSString *path = [NSString stringWithFormat:@"statuses/retweet/%@.json", statusID];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self POST:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text media:(NSData *)media parameters:(NSDictionary *)parameters completion:(void (^)(GIGTweet *tweet, NSError *error))completion {
+    NSParameterAssert(text);
+    NSParameterAssert(media);
+    NSParameterAssert(completion);
+
+    parameters = [@{@"status" : text} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
+
+    OVCMultipartPart *part = [OVCMultipartPart partWithData:media name:@"media[]" type:@"application/octet-stream" filename:@"media"];
+    NSURLRequest *request = [self multipartFormRequestWithMethod:@"POST"
+                                                            path:@"statuses/update_with_media.json"
+                                                      parameters:[self requestParametersWithParameters:parameters]
+                                                           parts:@[part]];
+    OVCRequestOperation *operation = [self HTTPRequestOperationWithRequest:request resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *op, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+    [self enqueueHTTPRequestOperation:operation];
+
+    return operation;
+}
+
+- (OVCRequestOperation *)fetchRetweetersForStatus:(NSNumber *)statusID parameters:(NSDictionary *)parameters completion:(void (^)(GIGUserIDCollection *collection, NSError *error))completion {
+    NSParameterAssert(statusID);
+    NSParameterAssert(completion);
+
+    parameters = [@{@"id" : statusID} mtl_dictionaryByAddingEntriesFromDictionary:parameters];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self GET:@"statuses/retweeters/ids.json" parameters:requestParameters resultClass:GIGUserIDCollection.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }

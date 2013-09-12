@@ -1,4 +1,4 @@
-// GIGContributor.m
+// GIGUserIDCollection.m
 // 
 // Copyright (c) 2013 Guillermo Gonzalez
 //
@@ -20,14 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "GIGContributor.h"
+#import "GIGUserIDCollection.h"
 
-@implementation GIGContributor
+@implementation GIGUserIDCollection
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-            @"userID" : @"id",
-            @"screenName" : @"screen_name"
+            @"previousCursor" : @"previous_cursor",
+            @"nextCursor" : @"next_cursor",
+            @"IDs" : @"ids"
     };
 }
 

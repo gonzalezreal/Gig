@@ -18,20 +18,14 @@
     [super setUp];
 
     NSDictionary *representation = @{
-            @"id" : @114749583439036416,
-            @"contributors" : @[
-                    @{
-                            @"id" : @819797,
-                            @"screen_name" : @"episod"
-                    }
-            ],
+            @"id_str" : @"114749583439036416",
             @"coordinates" : @{
                     @"coordinates" : @[@-75.14310264, @40.05701649],
                     @"type" : @"Point"
             },
             @"created_at" : @"Wed Aug 27 13:08:45 +0000 2008",
             @"current_user_retweet": @{
-                    @"id": @26815871309
+                    @"id_str": @"26815871309"
             },
             @"entities" : @{
                     @"hashtags" : @[
@@ -81,7 +75,7 @@
             @"favorited" : @YES,
             @"filter_level" : @"medium",
             @"in_reply_to_screen_name" : @"twitterapi",
-            @"in_reply_to_status_id" : @114749583439036416,
+            @"in_reply_to_status_id_str" : @"114749583439036416",
             @"in_reply_to_user_id" : @819797,
             @"lang" : @"en",
             @"place" : @{
@@ -112,7 +106,7 @@
             @"retweeted" : @YES,
             @"retweeted_status" : @{
                     @"text" : @"Tweet Button, Follow Button, and Web Intents javascript now support SSL http://t.co/9fbA0oYy ^TS",
-                    @"id" : @21947795900469248
+                    @"id_str" : @"21947795900469248"
             },
             @"source" : @"web",
             @"text" : @"Tweet Button, Follow Button, and Web Intents javascript now support SSL http://t.co/9fbA0oYy ^TS",
@@ -139,10 +133,6 @@
 
 - (void)testThatTweetInitializes {
     STAssertEqualObjects(self.tweet.statusID, @114749583439036416, nil);
-
-    STAssertEquals(self.tweet.contributors.count, (NSUInteger)1, nil);
-    GIGContributor *contributor = self.tweet.contributors[0];
-    STAssertEqualObjects(contributor.userID, @819797, nil);
 
     GIGGeometry *coordinates = self.tweet.coordinates;
     STAssertEqualObjects(coordinates.coordinates, (@[@-75.14310264, @40.05701649]), nil);

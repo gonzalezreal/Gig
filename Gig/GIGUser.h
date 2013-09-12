@@ -38,11 +38,6 @@
 // The unique identifier for this User.
 @property (copy, nonatomic, readonly) NSNumber *userID;
 
-// Indicates that the user has an account with "contributor mode" enabled,
-// allowing for Tweets issued by the user to be co-authored by another account.
-// Rarely true.
-@property (copy, nonatomic, readonly) NSNumber *contributorsEnabled;
-
 // The date that the user account was created on Twitter.
 @property (copy, nonatomic, readonly) NSDate *creationDate;
 

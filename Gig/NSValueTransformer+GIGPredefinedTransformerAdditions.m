@@ -28,6 +28,7 @@
 NSString * const GIGRangeValueTransformerName = @"GIGRangeValueTransformerName";
 NSString * const GIGDateValueTransformerName = @"GIGDateValueTransformerName";
 NSString * const GIGColorValueTransformerName = @"GIGColorValueTransformerName";
+NSString * const GIGNumericStringValueTransformerName = @"GIGNumericStringValueTransformerName";
 
 static NSDateFormatter *GIGTwitterDateFormatter() {
     static dispatch_once_t onceToken;
@@ -43,6 +44,18 @@ static NSDateFormatter *GIGTwitterDateFormatter() {
     return dateFormatter;
 }
 
+static NSNumberFormatter *GIGNumberFormatter () {
+    static dispatch_once_t onceToken;
+    static NSNumberFormatter *numberFormatter;
+
+    dispatch_once(&onceToken, ^{
+        numberFormatter = [[NSNumberFormatter alloc] init];
+        [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    });
+
+    return numberFormatter;
+}
+
 @implementation NSValueTransformer (GIGPredefinedTransformerAdditions)
 
 + (void)load {
@@ -52,7 +65,7 @@ static NSDateFormatter *GIGTwitterDateFormatter() {
         //
 
         MTLValueTransformer *rangeValueTransformer = [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSArray *array) {
-            if ([array isKindOfClass:[NSArray class]] && [array count] >= 2) {
+            if ([array isKindOfClass:NSArray.class] && array.count >= 2) {
                 NSUInteger offset1 = [array[0] unsignedIntegerValue];
                 NSUInteger offset2 = [array[1] unsignedIntegerValue];
 
@@ -63,10 +76,10 @@ static NSDateFormatter *GIGTwitterDateFormatter() {
 
             return [NSValue valueWithRange:NSMakeRange(NSNotFound, 0)];
         } reverseBlock:^id(NSValue *value) {
-            if (value && [value isKindOfClass:[NSValue class]]) {
+            if (value && [value isKindOfClass:NSValue.class]) {
                 NSAssert(strcmp([value objCType], @encode(NSRange)) == 0, @"*** Expected a range, got: %@", value);
 
-                NSRange range = [value rangeValue];
+                NSRange range = value.rangeValue;
                 if (range.location != NSNotFound && range.length > 0) {
                     return @[@(range.location), @(range.location + range.length)];
                 }
@@ -82,13 +95,13 @@ static NSDateFormatter *GIGTwitterDateFormatter() {
         //
 
         MTLValueTransformer *dateValueTransformer = [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
-            if ([value isKindOfClass:[NSString class]]) {
+            if ([value isKindOfClass:NSString.class]) {
                 NSDateFormatter *dateFormatter = GIGTwitterDateFormatter();
                 return [dateFormatter dateFromString:value];
             }
             return nil;
         } reverseBlock:^id(NSDate *date) {
-            if ([date isKindOfClass:[NSDate class]]) {
+            if ([date isKindOfClass:NSDate.class]) {
                 NSDateFormatter *dateFormatter = GIGTwitterDateFormatter();
                 return [dateFormatter stringFromDate:date];
             }
@@ -102,7 +115,7 @@ static NSDateFormatter *GIGTwitterDateFormatter() {
         //
 
         MTLValueTransformer *colorValueTransformer = [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
-            if ([value isKindOfClass:[NSString class]]) {
+            if ([value isKindOfClass:NSString.class]) {
                 return GIGColorFromString(value);
             }
             return nil;
@@ -111,6 +124,22 @@ static NSDateFormatter *GIGTwitterDateFormatter() {
         }];
 
         [NSValueTransformer setValueTransformer:colorValueTransformer forName:GIGColorValueTransformerName];
+
+        //
+        // GIGNumericStringValueTransformerName
+        //
+
+        MTLValueTransformer *numericStringValueTransformer = [MTLValueTransformer reversibleTransformerWithForwardBlock:^id(NSString *value) {
+            if ([value isKindOfClass:NSString.class]) {
+                NSNumberFormatter *numberFormatter = GIGNumberFormatter();
+                return [numberFormatter numberFromString:value];
+            }
+            return nil;
+        } reverseBlock:^id(NSNumber *number) {
+            return [number stringValue];
+        }];
+
+        [NSValueTransformer setValueTransformer:numericStringValueTransformer forName:GIGNumericStringValueTransformerName];
     }
 }
 
