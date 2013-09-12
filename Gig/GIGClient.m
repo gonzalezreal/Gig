@@ -35,6 +35,11 @@ NSString * const GIGUserIDKey = @"user_id";
 NSString * const GIGScreenNameKey = @"screen_name";
 NSString * const GIGExcludeRepliesKey = @"exclude_replies";
 NSString * const GIGIncludeRetweetsKey = @"include_rts";
+NSString * const GIGInReplyToStatusIDKey = @"in_reply_to_status_id";
+NSString * const GIGLatitudeKey = @"lat";
+NSString * const GIGLongitudeKey = @"long";
+NSString * const GIGPlaceIDKey = @"place_id";
+NSString * const GIGDisplayCoordinatesKey = @"display_coordinates";
 
 @implementation GIGClient
 
@@ -125,6 +130,20 @@ NSString * const GIGIncludeRetweetsKey = @"include_rts";
     NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
 
     return [self POST:path parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
+        completion(responseObject, error);
+    }];
+}
+
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text parameters:(NSDictionary *)parameters completion:(void (^)(GIGTweet *tweet, NSError *error))completion {
+    NSParameterAssert(text);
+    NSParameterAssert(completion);
+
+    parameters = [parameters mtl_dictionaryByAddingEntriesFromDictionary:@{
+            @"status" : text
+    }];
+    NSDictionary *requestParameters = [self requestParametersWithParameters:parameters];
+
+    return [self POST:@"statuses/update.json" parameters:requestParameters resultClass:GIGTweet.class resultKeyPath:nil completion:^(AFHTTPRequestOperation *operation, id responseObject, NSError *error) {
         completion(responseObject, error);
     }];
 }

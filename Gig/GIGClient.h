@@ -34,6 +34,11 @@ extern NSString * const GIGUserIDKey;
 extern NSString * const GIGScreenNameKey;
 extern NSString * const GIGExcludeRepliesKey;
 extern NSString * const GIGIncludeRetweetsKey;
+extern NSString * const GIGInReplyToStatusIDKey;
+extern NSString * const GIGLatitudeKey;
+extern NSString * const GIGLongitudeKey;
+extern NSString * const GIGPlaceIDKey;
+extern NSString * const GIGDisplayCoordinatesKey;
 
 // Twitter API client.
 @interface GIGClient : OVCSocialClient
@@ -111,5 +116,16 @@ typedef NS_ENUM(NSInteger, GIGTimeline) {
 - (OVCRequestOperation *)removeStatus:(NSNumber *)statusID
                             parameters:(NSDictionary *)parameters
                             completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
+
+// Updates the authenticating user's current status, also known as tweeting.
+//
+// text       - The text of your status update, typically up to 140 characters.
+// parameters - The parameters for the request.
+// completion - A block to be executed when the operation finishes.
+//
+// See https://dev.twitter.com/docs/api/1.1/post/statuses/update
+- (OVCRequestOperation *)updateStatusWithText:(NSString *)text
+                                   parameters:(NSDictionary *)parameters
+                                   completion:(void (^)(GIGTweet *tweet, NSError *error))completion;
 
 @end
