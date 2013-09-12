@@ -545,7 +545,6 @@
 		99F2455717DDB0C100541C24 = {
 			isa = PBXGroup;
 			children = (
-				99FEFF4117E0AC1300AE0AA7 /* Social.framework */,
 				99F2456517DDB0C100541C24 /* Gig */,
 				99F2457A17DDB0C100541C24 /* GigTests */,
 				99F2456217DDB0C100541C24 /* Frameworks */,
@@ -580,6 +579,7 @@
 				9978C5F217DE0221004F7EBF /* Accounts.framework */,
 				9978100A17DEF5DC008E9359 /* AFNetworking.framework */,
 				9978100817DEF5D5008E9359 /* Mantle.framework */,
+				99FEFF4117E0AC1300AE0AA7 /* Social.framework */,
 				9978101117DEF65B008E9359 /* OHHTTPStubs.framework */,
 				9978C5E717DDF94E004F7EBF /* libOHHTTPStubs-iOS.a */,
 				9978C5E517DDF944004F7EBF /* libMantle.a */,
