@@ -26,7 +26,6 @@ extern NSString * const GIGCountKey;
 extern NSString * const GIGSinceIDKey;
 extern NSString * const GIGMaxIDKey;
 extern NSString * const GIGTrimUserKey;
-extern NSString * const GIGContributorDetailsKey;
 extern NSString * const GIGIncludeEntitiesKey;
 extern NSString * const GIGIncludeUserEntitiesKey;
 extern NSString * const GIGUserIDKey;

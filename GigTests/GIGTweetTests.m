@@ -19,12 +19,6 @@
 
     NSDictionary *representation = @{
             @"id" : @114749583439036416,
-            @"contributors" : @[
-                    @{
-                            @"id" : @819797,
-                            @"screen_name" : @"episod"
-                    }
-            ],
             @"coordinates" : @{
                     @"coordinates" : @[@-75.14310264, @40.05701649],
                     @"type" : @"Point"
@@ -139,10 +133,6 @@
 
 - (void)testThatTweetInitializes {
     STAssertEqualObjects(self.tweet.statusID, @114749583439036416, nil);
-
-    STAssertEquals(self.tweet.contributors.count, (NSUInteger)1, nil);
-    GIGContributor *contributor = self.tweet.contributors[0];
-    STAssertEqualObjects(contributor.userID, @819797, nil);
 
     GIGGeometry *coordinates = self.tweet.coordinates;
     STAssertEqualObjects(coordinates.coordinates, (@[@-75.14310264, @40.05701649]), nil);

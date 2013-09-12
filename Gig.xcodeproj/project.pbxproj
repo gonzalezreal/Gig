@@ -24,12 +24,6 @@
 		9976080317DF4A9E002D9951 /* GIGPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 997607FF17DF4A9E002D9951 /* GIGPlace.m */; };
 		9976080517DF4ACE002D9951 /* GIGPlaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080417DF4ACE002D9951 /* GIGPlaceTests.m */; };
 		9976080617DF4ACE002D9951 /* GIGPlaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080417DF4ACE002D9951 /* GIGPlaceTests.m */; };
-		9976080917DF5082002D9951 /* GIGContributor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976080717DF5082002D9951 /* GIGContributor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9976080A17DF5082002D9951 /* GIGContributor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976080717DF5082002D9951 /* GIGContributor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9976080B17DF5082002D9951 /* GIGContributor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080817DF5082002D9951 /* GIGContributor.m */; };
-		9976080C17DF5082002D9951 /* GIGContributor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080817DF5082002D9951 /* GIGContributor.m */; };
-		9976080E17DF50F7002D9951 /* GIGContributorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080D17DF50F7002D9951 /* GIGContributorTests.m */; };
-		9976080F17DF50F7002D9951 /* GIGContributorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976080D17DF50F7002D9951 /* GIGContributorTests.m */; };
 		9976081817DF581C002D9951 /* GIGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976081617DF581C002D9951 /* GIGColor.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9976081A17DF581C002D9951 /* GIGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9976081717DF581C002D9951 /* GIGColor.m */; };
 		9976081C17DF5CA1002D9951 /* GIGColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9976081617DF581C002D9951 /* GIGColor.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -210,9 +204,6 @@
 		997607FE17DF4A9E002D9951 /* GIGPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGPlace.h; sourceTree = "<group>"; };
 		997607FF17DF4A9E002D9951 /* GIGPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGPlace.m; sourceTree = "<group>"; };
 		9976080417DF4ACE002D9951 /* GIGPlaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGPlaceTests.m; sourceTree = "<group>"; };
-		9976080717DF5082002D9951 /* GIGContributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGContributor.h; sourceTree = "<group>"; };
-		9976080817DF5082002D9951 /* GIGContributor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGContributor.m; sourceTree = "<group>"; };
-		9976080D17DF50F7002D9951 /* GIGContributorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGContributorTests.m; sourceTree = "<group>"; };
 		9976081617DF581C002D9951 /* GIGColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGColor.h; sourceTree = "<group>"; };
 		9976081717DF581C002D9951 /* GIGColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIGColor.m; sourceTree = "<group>"; };
 		9976081E17DF625F002D9951 /* GIGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIGUser.h; sourceTree = "<group>"; };
@@ -361,8 +352,6 @@
 			children = (
 				997607F117DF4366002D9951 /* Places */,
 				9925E33917DE0C200097A2B9 /* Entities */,
-				9976080717DF5082002D9951 /* GIGContributor.h */,
-				9976080817DF5082002D9951 /* GIGContributor.m */,
 				9976081E17DF625F002D9951 /* GIGUser.h */,
 				9976081F17DF625F002D9951 /* GIGUser.m */,
 				9976082417DF626C002D9951 /* GIGTweet.h */,
@@ -399,7 +388,6 @@
 			children = (
 				997607FA17DF43A2002D9951 /* Places */,
 				9978103F17DF137B008E9359 /* Entities */,
-				9976080D17DF50F7002D9951 /* GIGContributorTests.m */,
 				9976082B17DF62C8002D9951 /* GIGUserTests.m */,
 				9976082A17DF62C8002D9951 /* GIGTweetTests.m */,
 			);
@@ -665,7 +653,6 @@
 				9978105717DF1DE5008E9359 /* GIGEntities.h in Headers */,
 				997607F617DF437E002D9951 /* GIGGeometry.h in Headers */,
 				9976080017DF4A9E002D9951 /* GIGPlace.h in Headers */,
-				9976080917DF5082002D9951 /* GIGContributor.h in Headers */,
 				9976081817DF581C002D9951 /* GIGColor.h in Headers */,
 				9976082017DF625F002D9951 /* GIGUser.h in Headers */,
 				9976082617DF626C002D9951 /* GIGTweet.h in Headers */,
@@ -689,7 +676,6 @@
 				9978105817DF1DE5008E9359 /* GIGEntities.h in Headers */,
 				997607F717DF437E002D9951 /* GIGGeometry.h in Headers */,
 				9976080117DF4A9E002D9951 /* GIGPlace.h in Headers */,
-				9976080A17DF5082002D9951 /* GIGContributor.h in Headers */,
 				9976081C17DF5CA1002D9951 /* GIGColor.h in Headers */,
 				9976082117DF625F002D9951 /* GIGUser.h in Headers */,
 				9976082717DF626C002D9951 /* GIGTweet.h in Headers */,
@@ -917,7 +903,6 @@
 				9978105A17DF1DE5008E9359 /* GIGEntities.m in Sources */,
 				997607F917DF437E002D9951 /* GIGGeometry.m in Sources */,
 				9976080317DF4A9E002D9951 /* GIGPlace.m in Sources */,
-				9976080C17DF5082002D9951 /* GIGContributor.m in Sources */,
 				9976081D17DF5CA7002D9951 /* GIGColor.m in Sources */,
 				9976082317DF625F002D9951 /* GIGUser.m in Sources */,
 				9976082917DF626C002D9951 /* GIGTweet.m in Sources */,
@@ -940,7 +925,6 @@
 				9978105D17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
 				997607FD17DF43B7002D9951 /* GIGGeometryTests.m in Sources */,
 				9976080617DF4ACE002D9951 /* GIGPlaceTests.m in Sources */,
-				9976080F17DF50F7002D9951 /* GIGContributorTests.m in Sources */,
 				9976082D17DF62C8002D9951 /* GIGTweetTests.m in Sources */,
 				9976082F17DF62C8002D9951 /* GIGUserTests.m in Sources */,
 				99DDE30117E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,
@@ -962,7 +946,6 @@
 				9978105917DF1DE5008E9359 /* GIGEntities.m in Sources */,
 				997607F817DF437E002D9951 /* GIGGeometry.m in Sources */,
 				9976080217DF4A9E002D9951 /* GIGPlace.m in Sources */,
-				9976080B17DF5082002D9951 /* GIGContributor.m in Sources */,
 				9976081A17DF581C002D9951 /* GIGColor.m in Sources */,
 				9976082217DF625F002D9951 /* GIGUser.m in Sources */,
 				9976082817DF626C002D9951 /* GIGTweet.m in Sources */,
@@ -985,7 +968,6 @@
 				9978105C17DF1E29008E9359 /* GIGEntitiesTests.m in Sources */,
 				997607FC17DF43B7002D9951 /* GIGGeometryTests.m in Sources */,
 				9976080517DF4ACE002D9951 /* GIGPlaceTests.m in Sources */,
-				9976080E17DF50F7002D9951 /* GIGContributorTests.m in Sources */,
 				9976082C17DF62C8002D9951 /* GIGTweetTests.m in Sources */,
 				9976082E17DF62C8002D9951 /* GIGUserTests.m in Sources */,
 				99DDE30017E05A9E002682B1 /* GIGUserEntitiesTests.m in Sources */,

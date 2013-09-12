@@ -19,7 +19,6 @@
 
     NSDictionary *representation = @{
             @"id" : @6253282,
-            @"contributors_enabled" : @NO,
             @"created_at" : @"Mon Nov 29 21:18:15 +0000 2010",
             @"default_profile" : @NO,
             @"default_profile_image" : @NO,
@@ -113,8 +112,6 @@
 
 - (void)testThatUserInitializes {
     STAssertEqualObjects(self.user.userID, @6253282, nil);
-
-    STAssertEqualObjects(self.user.contributorsEnabled, @NO, nil);
 
     NSValueTransformer *dateTransformer = [NSValueTransformer valueTransformerForName:GIGDateValueTransformerName];
     NSDate *creationDate = [dateTransformer transformedValue:@"Mon Nov 29 21:18:15 +0000 2010"];

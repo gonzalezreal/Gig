@@ -31,7 +31,6 @@
     STAssertEqualObjects(GIGSinceIDKey, @"since_id", nil);
     STAssertEqualObjects(GIGMaxIDKey, @"max_id", nil);
     STAssertEqualObjects(GIGTrimUserKey, @"trim_user", nil);
-    STAssertEqualObjects(GIGContributorDetailsKey, @"contributor_details", nil);
     STAssertEqualObjects(GIGIncludeEntitiesKey, @"include_entities", nil);
     STAssertEqualObjects(GIGIncludeUserEntitiesKey, @"include_user_entities", nil);
     STAssertEqualObjects(GIGUserIDKey, @"user_id", nil);

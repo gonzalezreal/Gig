@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "GIGTweet.h"
-#import "GIGContributor.h"
 #import "GIGGeometry.h"
 #import "GIGEntities.h"
 #import "GIGPlace.h"
@@ -49,10 +48,6 @@
             @"withheldInCountries" : @"withheld_in_countries",
             @"withheldScope" : @"withheld_scope"
     };
-}
-
-+ (NSValueTransformer *)contributorsJSONTransformer {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:GIGContributor.class];
 }
 
 + (NSValueTransformer *)coordinatesJSONTransformer {

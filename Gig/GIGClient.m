@@ -29,7 +29,6 @@ NSString * const GIGCountKey = @"count";
 NSString * const GIGSinceIDKey = @"since_id";
 NSString * const GIGMaxIDKey = @"max_id";
 NSString * const GIGTrimUserKey = @"trim_user";
-NSString * const GIGContributorDetailsKey = @"contributor_details";
 NSString * const GIGIncludeEntitiesKey = @"include_entities";
 NSString * const GIGIncludeUserEntitiesKey = @"include_user_entities";
 NSString * const GIGUserIDKey = @"user_id";
